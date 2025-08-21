@@ -1,0 +1,125 @@
+:host {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 5%;
+    z-index: 99999;
+}
+
+.window {
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    display: block;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0.5rem;
+    max-width: 35vw;
+    max-height: 80vh;
+    min-width: 20rem;
+    min-height: 10vh;
+}
+
+.window-header {
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.warning-window-header img,
+.information-window-header img,
+.error-window-header img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.window-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+.window-subtitle {
+    display: flex;
+    font-size: 0.9rem;
+    text-align: justify;
+    justify-content: center;
+}
+
+.window-content {
+    font-size: 0.8rem;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: justify;
+}
+
+.information-window {
+    background-color: var(--color-secondary);
+    color: var(--text-color-primary);
+    padding: 0;
+    text-align: unset;
+}
+
+.information-window-header {
+    background-color: var(--color-primary);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.warning-window {
+    background-color: var(--warning-bg);
+    color: var(--text-color-warning);
+    padding: 0;
+    text-align: unset;
+}
+
+.warning-window-header {
+    background-color: var(--warning);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.error-window {
+    background-color: var(--error-bg);
+    color: var(--text-color-error);
+    padding: 0;
+    text-align: unset;
+}
+
+.error-window-header {
+    background-color: var(--error);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.error-window-content {
+    padding: 1rem;
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(./images/common/cross.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: unset;
+    border: unset;
+
+    cursor: pointer;
+    position: relative;
+    margin-left: 0.5rem;
+    /*right: -0.8rem;*/
+    /*top: -0.5rem;*/
+}
+
+.close-btn img {
+    width: 1.2rem;
+}

@@ -1,0 +1,100 @@
+{
+    "datetime": {
+        "iso8601": "2024-07-22T08:00:00Z"
+    },
+    "globalConfig": "./projectFiles/global/global.json",
+    "manual": "https://example.com/manual.pdf",
+    "terrain": {
+        "examples:terrain.title": {
+            "show": true,
+            "url": "https://example.com/terrain/",
+            "iconUrl": "./images/terrain.png",
+            "toolTip": "Example Terrain Tooltip",
+            "requestVertexNormals": true,
+            "requestWaterMask": false,
+            "requestMetadata": false,
+            "credit": "Example Terrain: <a style='color: deepskyblue; text-decoration: underline;' href='https://example.com/terrain_metadata'>Example.com</a>",
+            "creation": "CesiumTerrainProvider"
+        }
+    },
+    "threeD": "./projectFiles/local/partial.json",
+    "twoD": {
+        "Example File": {
+            "url": "https://example.com/file.geojson",
+            "target": "file",
+            "show": true,
+            "table": true,
+            "ableToDelete": false,
+            "color": "rgba(0,0,140,0.7)",
+            "clampToGround": true,
+            "credit": "Border: <a style='color: deepskyblue; text-decoration: underline;' href='https://example.com/geojson_metadata'>Example.com</a>"
+        },
+        "Example POIs": {
+            "url": "https://example.com/WFS/guest?service=wfs&request=GetFeature&outputFormat=GeoJSON",
+            "target": "pois",
+            "show": true,
+            "table": true,
+            "markerSymbol": "?",
+            "billboardSource": "./images/pin.svg",
+            "billboardScale": 0.05,
+            "billboardVerticalOrigin": "TOP",
+            "height": 30,
+            "markerSize": 25,
+            "selectable": true,
+            "deletable": false,
+            "color": "rgba(255,0,140,0.7)",
+            "clampToGround": true,
+            "credit": "Example Credit",
+            "type": "geojson",
+            "tableAttributes": {
+                "Place": "Place",
+                "POI": "example:poi.infobox"
+            }
+        },
+        "Example Polygon": {
+            "url": "https://example.com/WFS/guest?service=wfs&request=GetFeature&outputFormat=GeoJSON",
+            "target": "polygon",
+            "show": true,
+            "table": true,
+            "outlineWidth": 15,
+            "outlineColor": "rgba(255,0,0,0.7)",
+            "selectable": false,
+            "color": "rgba(255,0, 0, .25)",
+            "clampToGround": true,
+            "type": "geojson"
+        }
+    },
+    "particleSystems": [
+        {
+            "targetId": "EXAMPLE_ID_1234",
+            "coordinates": [377000, 5725000, 54.8],
+            "imagePath": "./images/Flamme.png",
+            "imageSize": [20, 20],
+            "startScale": 50,
+            "endScale": 50,
+            "particleLife": 1,
+            "speed": 1.5,
+            "startColor": [1, 1, 1, 1],
+            "endColor": [1, 1, 1, 0],
+            "emitter": ["ConeEmitter", 50],
+            "emissionRate": 40.0,
+            "lifetime": 16.0,
+            "direction": [0, 0.2, 0.9],
+            "forceFactor": 2
+        }
+    ],
+    "links": [
+        {
+            "imgUrl": "https://example.com/ExampleApp1.png",
+            "title": "App1",
+            "description": "First Application",
+            "linkUrl": "https://app1.example.com/"
+        },
+        {
+            "imgUrl": "https://example.com/ExampleApp2.png",
+            "title": "App2",
+            "description": "Second Application",
+            "linkUrl": "https://app2.example.com/"
+        }
+    ]
+}

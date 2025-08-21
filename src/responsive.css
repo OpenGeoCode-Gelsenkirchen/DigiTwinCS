@@ -1,0 +1,125 @@
+@media screen and (max-height: 768px) {
+    #themeMapContainer {
+        height: 60vh;
+    }
+
+    #mapContainer {
+        right: 10vh;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #mapContainer {
+        right: 15vw;
+    }
+
+    #toolsContainer {
+        top: 35%;
+    }
+
+    #tool-bar {
+        top: 45vh;
+    }
+
+    #sidebar {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #address {
+        width: 55vw;
+    }
+
+    #compass {
+        right: 0.5vh;
+        top: 20vh;
+    }
+
+    .cesium-infoBox {
+        width: 60%;
+    }
+
+    #contact-window {
+        min-width: 100%;
+        width: 100%;
+        left: 0%;
+    }
+
+    #information-window {
+        min-width: 100%;
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contentContainer {
+        left: 0%;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    #settingsContainer {
+        left: 0%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header_span {
+        display: none;
+    }
+
+    .cesium-infoBox {
+        width: 85%;
+    }
+
+    #themeMapContainer {
+        width: 80vw;
+        left: 0%;
+    }
+
+    #subsidebar {
+        font-size: 0.7em;
+    }
+
+    .ui-menu-item {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #sidebar {
+        display: none;
+    }
+
+    #toolsContainer {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    #content > div > table > tbody {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-height: 800px) and (max-width: 750px) {
+    #compass {
+        width: 10vh;
+        height: 10vh;
+        top: 30vh;
+        right: 0.5vw;
+    }
+
+    #tool-bar {
+        top: 45vh;
+    }
+}
+
+@media screen and (max-height: 440px) and (min-width: 380px) and (max-width: 800px) {
+    #compass {
+        top: 15vh;
+        right: 23vw;
+    }
+}

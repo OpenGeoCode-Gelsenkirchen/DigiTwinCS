@@ -1,0 +1,29 @@
+//tsconfig google
+{
+    "checkJs": true,
+    "compilerOptions": {
+        "allowJs": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "composite": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["es2021", "dom"],
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "pretty": true,
+        "sourceMap": true,
+        "stripInternal": true,
+        "strict": true,
+        "moduleResolution": "bundler",
+        "skipLibCheck": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "module": "esnext",
+        "target": "es2022"
+    },
+    "files": ["src/init.js"],
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

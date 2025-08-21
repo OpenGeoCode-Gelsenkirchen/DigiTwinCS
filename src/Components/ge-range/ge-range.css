@@ -1,0 +1,24 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    /*max-width: 20rem;*/
+    padding: 1rem;
+    width: 100%;
+}
+
+:host div {
+    display: flex;
+}
+
+:host div input {
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+:host div input {
+    grid-area: slider;
+}
+
+input {
+    accent-color: var(--primary-color-active);
+}

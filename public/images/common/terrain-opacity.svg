@@ -1,0 +1,14 @@
+<svg width="355" height="253" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <line id="svg_1" y2="248" x2="173.71429" y1="5" x1="172.71429" stroke-width="10" stroke="#FFF" fill="none"/>
+  <line id="svg_2" y2="216" x2="172.21429" y1="215" x1="13.21429" stroke-width="15" stroke="#FFF" fill="none"/>
+  <line stroke-dasharray="5,5" id="svg_3" y2="217.66667" x2="336.88096" y1="216.66667" x1="177.88096" stroke-width="15" stroke="#FFF" fill="none"/>
+  <line stroke="#FFF" id="svg_4" y2="84.33225" x2="95.54762" y1="218.15762" x1="7.5" stroke-width="15" fill="none"/>
+  <line transform="rotate(-78.8111 115.316 114.747)" stroke="#FFF" id="svg_5" y2="91.23695" x2="132.5379" y1="138.25737" x1="98.09487" stroke-width="15" fill="none"/>
+  <line transform="rotate(-89.5762 153.911 125.85)" stroke="#FFF" id="svg_6" y2="145.19989" x2="174.23166" y1="106.49933" x1="133.58995" stroke-width="15" fill="none"/>
+  <line transform="rotate(-89.5762 207.15 71.311)" stroke="#FFF" id="svg_7" y2="103.65335" x2="241.23652" y1="38.96865" x1="173.06287" stroke-width="15" fill="none" stroke-dasharray="5,5"/>
+  <line transform="rotate(-92.7674 292.981 135.277)" stroke="#FFF" stroke-dasharray="5,5" id="svg_10" y2="85.13755" x2="378.64838" y1="185.41724" x1="207.31416" stroke-width="15" fill="none"/>
+ </g>
+
+</svg>

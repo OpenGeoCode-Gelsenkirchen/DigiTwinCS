@@ -1,0 +1,6 @@
+{
+    "watch": ["./documents/*", "./src/**"],
+    "ext": "js json ts md css html",
+    "exec": "npx typedoc",
+    "ignoreRoot": [".git"]
+}

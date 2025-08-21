@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    padding: 1rem;
+}
+
+:host label {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+:host div {
+    display: flex;
+}
+
+:host div input {
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+:host div input {
+    grid-area: slider;
+}
+
+:host div ge-input-field {
+    grid-area: input-field;
+}
+
+:host div ge-input-field {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 50px;
+}
+
+input[type='range'] {
+    accent-color: var(--primary-color-active);
+}

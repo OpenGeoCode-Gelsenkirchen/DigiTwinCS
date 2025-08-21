@@ -1,0 +1,174 @@
+:host {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    display: flex;
+
+    container-name: wrapper;
+}
+
+div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    color: var(--text-color-primary);
+    overflow: hidden;
+    font-family: Lato, sans-serif !important;
+    min-width: fit-content;
+}
+
+.bg-red {
+    background-color: rgb(229, 77, 77);
+}
+
+img {
+    position: relative;
+    width: auto;
+    height: 65%;
+    z-index: 0;
+}
+
+:host([contains-text]) span {
+    position: absolute;
+    /*margin: 0.25rem;*/
+    z-index: 1;
+}
+
+:host([contains-text][text-overlay]) span {
+    position: absolute;
+}
+
+:host([text-outline]) span {
+    text-shadow:
+        1px 1px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        2px 2px 2px black,
+        -2px -2px 2px black,
+        2px -2px 2px black,
+        -2px 2px 2px black;
+}
+
+:host([img-size='small']) img {
+    width: auto;
+    height: 50%;
+}
+
+:host([img-size='full']) img {
+    width: 100%;
+    height: 100%;
+}
+
+:host([showborder]) div {
+    border: 1px solid black;
+}
+
+:host(:hover) div {
+    background-color: var(--primary-color-active);
+}
+
+:host([border-hover]:hover) div {
+    border: 1px solid var(--primary-color-active);
+}
+
+:host([active]) div {
+    background-color: var(--primary-color-active);
+}
+
+:host([active][showborder]) div {
+    border: 1px solid var(--primary-color-active-border);
+}
+
+:host([disabled]) {
+    pointer-events: none;
+}
+
+:host([disabled]) div {
+    background: var(--color-primary);
+    opacity: 0.5;
+}
+
+:host([shape='square']) div {
+    border-radius: 0.25em;
+}
+
+:host([shape='round']) div {
+    border-radius: 50%;
+}
+
+:host([shape='round']) img {
+    width: 60%;
+    height: 60%;
+}
+
+:host([shape='rectangle']) div {
+    border-radius: 0.25em;
+}
+
+:host([shape='rectangle'][size='extra-small']) div {
+    width: 3em;
+    height: 2em;
+}
+
+:host([shape='rectangle'][size='small']) div {
+    width: 3.6em;
+    height: 1.8em;
+}
+
+:host([shape='rectangle'][size='medium']) div {
+    width: 7.2em;
+    height: 3.6em;
+}
+
+:host([shape='rectangle'][size='large']) div {
+    width: 10.8em;
+    height: 7.2em;
+}
+
+:host([shape='rectangle'][size='long']) div {
+    width: 16em;
+    height: 4em;
+}
+
+:host([size='extra-small']) div {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+:host([size='small']) div {
+    width: 3em;
+    height: 3em;
+}
+
+:host([size='medium']) div {
+    width: 3.6em;
+    height: 3.6em;
+}
+
+:host([size='large']) div {
+    width: 4.2em;
+    height: 4.2em;
+}
+
+:host([size='medium-large']) div {
+    width: 5.5em;
+    height: 5.5em;
+}
+
+:host([size='extra-large']) div {
+    width: 6.2em;
+    height: 6.2em;
+}

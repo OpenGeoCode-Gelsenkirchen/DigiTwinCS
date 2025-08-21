@@ -1,0 +1,161 @@
+{
+    "locales": "./locales/",
+    "boundaries": {
+        "x": {
+            "min": 366000,
+            "max": 382000
+        },
+        "y": {
+            "min": 5711000,
+            "max": 5735000
+        }
+    },
+    "proj4": {
+        "definition": "+proj=utm +ellps=GRS80 +datum=ETRS89 +unit=m +zone=32U +no_defs",
+        "epsg": 25832,
+        "labelShort": "ETRS89",
+        "labelLong": "(ETRS89 / UTM Zone 32N)"
+    },
+    "header": {
+        "icon": {
+            "src": "https://example.com/image.svg",
+            "link": "https://example.com/landingPage"
+        },
+        "title": "common:header.title.text",
+        "extra": "common:header.extra"
+    },
+    "footer": {
+        "elements": [
+            "<a href='https://example.com/A' target='_blank' data-i18n='common:body:footer:data-privacy:text'>",
+            "<a href='https://example.com/B' target='_blank' data-i18n='common:body:footer:imprint:text'>"
+        ]
+    },
+    "baseLayer": {
+        "Example Webmap": {
+            "show": true,
+            "iconUrl": "./images/webmap.png",
+            "tooltip": "My example WebMap",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://wms.example.com/guest",
+                    "layers": "0",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:25832",
+                    "credit": "Webmap: <a style=\"color: deepskyblue; text-decoration: underline;\" href=\"https://example.com/webmap/metadata\">Example.com</a>"
+                }
+            ]
+        },
+        "Example TiledWebmap": {
+            "iconUrl": "./images/tiled_webmap.png",
+            "tooltip": "My example tiled Webmap",
+            "creation": [
+                {
+                    "type": "WebMapTileServiceImageryProvider",
+                    "url": "https://example.com/tile/1.0.0/web/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png",
+                    "layer": "",
+                    "style": "default",
+                    "tileMatrixSetID": "WEBMERCATOR",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "credit": "Tiled Webmap: <a style='color: deepskyblue; text-decoration: underline;' href='https://example.com/tiled_webmap/metadata'>Example.com</a>"
+                }
+            ]
+        },
+        "Example Overlay Map": {
+            "iconUrl": "./images/overlay_map.png",
+            "tooltip": "My example overlay Webmap",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://example.com/myWebmap",
+                    "layers": "2025",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/png"
+                    },
+                    "enablePickFeatures": true,
+                    "credit": "Overlay Webmap: <a href='https://example.com/overlay_webmap/meta_Data' style='color: deepskyblue; text-decoration: underline;'>Example.com</a>"
+                },
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://example.com/myOverlay",
+                    "layers": "example_layer_1,example_layer_2",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/png"
+                    },
+                    "enablePickFeatures": false,
+                    "tileWidth": 256,
+                    "tileHeight": 256,
+                    "crs": "EPSG: 4326"
+                }
+            ]
+        }
+    },
+    "terrain": {
+        "Ellipsoid": {
+            "show": false,
+            "iconUrl": "./images/ellipsoid.png",
+            "tooltip": "WGS84 Ellipsoid",
+            "creation": [
+                {
+                    "type": "EllipsoidTerrainProvider"
+                }
+            ]
+        }
+    },
+    "styling": {
+        "Neutral": {
+            "iconUrl": "./images/neutral_styling.png",
+            "active": false,
+            "changeBackground": false,
+            "value": "default",
+            "tooltip": "common:header.title.html"
+        },
+        "Height": {
+            "iconUrl": "./images/height_styling.png",
+            "active": false,
+            "changeBackground": false,
+            "value": "height"
+        },
+        "Functional": {
+            "iconUrl": "./images/functional_styling.png",
+            "active": true,
+            "changeBackground": false,
+            "value": "functional"
+        }
+    },
+    "address": {
+        "url": "https://example.com/adress_coordinates.json",
+        "resolve": false
+    },
+    "buildingAreaUrl": "https://example.com/dimensions/area/",
+    "buildingLengthUrl": "https://example.com/dimensions/line/",
+    "compass": "./images/compass.svg",
+    "pdfIcon": "./images/pdfIcon.png",
+    "overviewMap": {
+        "url": "https://example.com/exampleService/guest",
+        "layers": "0",
+        "attribution": "Example.com",
+        "minZoom": 10,
+        "maxZoom": 16,
+        "bounds": [
+            [48.0, 6.08],
+            [60.64, 7.55]
+        ]
+    },
+    "deletionListSuffix": "myDeletionListSuffix",
+    "defaultGltfUrl": "https:/example.com/block.glb",
+    "wmsListUrl": {
+        "url": "https://example.com/myWMSList.txt",
+        "resolve": false
+    }
+}

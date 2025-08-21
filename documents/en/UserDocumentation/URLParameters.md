@@ -1,0 +1,24 @@
+---
+title: URL Parameters
+group: Documents
+category: Guides
+---
+
+## URL Parameters Reference
+
+| Parameter       | Type             | Accepted Values                  | Description                                                                                                                                                    | Notes                                                        |
+| --------------- | ---------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `project`       | string           | e.g. `myProjectName`             | Loads a specific configuration file from the local folder.                                                                                                     | If not set, the environment’s default configuration is used. |
+| `RWCamera`      | number           | coordinate value (X)             | Sets the camera X position (coordinate system declared with `epsg` inside the config).                                                                         | If `epsg` is not set, EPSG:4978 is assumed.                  |
+| `HWCamera`      | number           | coordinate value (Y)             | Sets the camera Y position (coordinate system declared with `epsg` inside the config).                                                                         | Same note as above.                                          |
+| `HCamera`       | number           | coordinate value (Z)             | Sets the camera height.                                                                                                                                        | Same note as above.                                          |
+| `RWTarget`      | number           | coordinate value (X)             | Sets the target's X position (coordinate system declared with `epsg` inside the config).                                                                       | Overrides camera position & orientation.                     |
+| `HWTarget`      | number           | coordinate value (Y)             | Sets the target's Y position (coordinate system declared with `epsg` inside the config).                                                                       | Same note as above.                                          |
+| `HTarget`       | number           | coordinate value (Z)             | Sets the target's height.                                                                                                                                      | Same note as above.                                          |
+| `cameraHeading` | number (degrees) | e.g. `45`                        | Sets the camera heading.                                                                                                                                       | Overridden by Target parameters.                             |
+| `cameraPitch`   | number (degrees) | e.g. `-15`                       | Sets the camera pitch.                                                                                                                                         | Overridden by Target parameters.                             |
+| `cameraRoll`    | number (degrees) | e.g. `0`                         | Sets the camera roll.                                                                                                                                          | Overridden by Target parameters.                             |
+| `profile`       | enum             | `low`, `medium`, `high`, `ultra` | Sets the graphics quality profile.                                                                                                                             | —                                                            |
+| `texture`       | boolean (int)    | `0` or `1`                       | Switches layers with tag `buildings` between texturized/non-texturized                                                                                         | —                                                            |
+| `mesh`          | boolean (int)    | `0` or `1`                       | Controls layers in the `mesh` category: `1` enables all mesh layers and disables all other layers in categories `3D` / `threeD`; `0` disables all mesh layers. | Boolean parameters are expressed as integer values.          |
+| `pedestrian`    | boolean (int)    | `0` or `1`                       | Starts the application in pedestrian mode.                                                                                                                     | Pedestrian mode takes precedence over mesh settings.         |

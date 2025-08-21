@@ -1,0 +1,17 @@
+<div class="window">
+    <div class="window-header">
+        <div class="window-title">
+            <div id="img-placeholder"></div>
+            <slot name="title"></slot>
+            <button class="close-btn">
+                <img draggable="false" src="./images/common/cross.svg"></img>
+            </button>
+        </div>
+        <span class="window-subtitle">
+            <slot name="subtitle"></slot>
+        </span>
+    </div>
+    <div class="window-content">
+        <slot name="content"></slot>
+    </div>
+</div>

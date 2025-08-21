@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="66.780151mm"
+   height="60.516319mm"
+   viewBox="0 0 66.780151 60.516319"
+   version="1.1"
+   id="svg4826"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="mesh-v2.svg"
+   inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+   inkscape:export-xdpi="104.47401"
+   inkscape:export-ydpi="104.47401"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4828"
+     pagecolor="#616161"
+     bordercolor="#FFFFFF"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.62352941"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="2.1800975"
+     inkscape:cx="50.456459"
+     inkscape:cy="153.20416"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g5767-9">
+    <sodipodi:guide
+       position="-4.0333827,30.137224"
+       orientation="0,-1"
+       id="guide13943"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="33.897578,50.561588"
+       orientation="1,0"
+       id="guide13945"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4823" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-53.678968,-78.706724)">
+    <g
+       id="g5846"
+       transform="matrix(1.1021878,0,0,1.0992289,-8.5847574,-10.819686)"
+       style="stroke-width:3.2706241;stroke-dasharray:none">
+      <g
+         id="g5767"
+         transform="translate(-8.6674819,-1.7163331)"
+         style="stroke-width:3.2706241;stroke-dasharray:none">
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.29890463;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path12377"
+           inkscape:flatsided="true"
+           sodipodi:sides="3"
+           sodipodi:cx="24.249119"
+           sodipodi:cy="58.731808"
+           sodipodi:r1="39.570099"
+           sodipodi:r2="19.785049"
+           sodipodi:arg1="0.52359878"
+           sodipodi:arg2="1.5707963"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+           inkscape:transform-center-y="-6.4509829"
+           transform="matrix(0.28946382,0,0,0.28946382,84.076507,97.31149)"
+           inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+           inkscape:export-xdpi="104.47401"
+           inkscape:export-ydpi="104.47401" />
+        <g
+           id="g5545-8"
+           transform="matrix(0.22194509,0.38442016,-0.38442016,0.22194509,104.0627,46.723204)"
+           style="stroke-width:7.3680931;stroke-dasharray:none">
+          <g
+             id="g5652"
+             transform="translate(-3.5386568,8.4490761)"
+             style="stroke-width:7.3680931;stroke-dasharray:none">
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.2989;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="-6.4509829"
+               transform="matrix(0.65210685,0,0,0.65210685,81.91357,65.735292)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.2989;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4-7"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="6.4509813"
+               transform="matrix(-0.65210685,0,0,-0.65210685,89.47686,131.27599)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.2989;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4-7-5"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="-6.4509814"
+               transform="matrix(0.65210685,0,0,0.65210685,128.22882,65.779507)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g5767-9"
+         transform="translate(10.369945,-2.0368935)"
+         style="stroke-width:3.2706241;stroke-dasharray:none">
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.2989;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path12377-1"
+           inkscape:flatsided="true"
+           sodipodi:sides="3"
+           sodipodi:cx="24.249119"
+           sodipodi:cy="58.731808"
+           sodipodi:r1="39.570099"
+           sodipodi:r2="19.785049"
+           sodipodi:arg1="0.52359878"
+           sodipodi:arg2="1.5707963"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+           inkscape:transform-center-y="-6.4509829"
+           transform="matrix(0.28946382,0,0,0.28946382,83.940414,97.31149)"
+           inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+           inkscape:export-xdpi="104.47401"
+           inkscape:export-ydpi="104.47401" />
+        <g
+           id="g5545-8-5"
+           transform="matrix(0.22194509,0.38442016,-0.38442016,0.22194509,104.0627,46.723204)"
+           style="stroke-width:7.3680931;stroke-dasharray:none">
+          <g
+             id="g5652-3"
+             transform="translate(-3.5386568,8.4490761)"
+             style="stroke-width:7.3680931;stroke-dasharray:none">
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.29890463;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4-5"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="-6.4509829"
+               transform="matrix(0.65210685,0,0,0.65210685,81.811373,65.912303)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.2989;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4-7-2"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="6.4509813"
+               transform="matrix(-0.65210685,0,0,-0.65210685,89.40447,131.40138)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+            <path
+               sodipodi:type="star"
+               style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:11.29890463;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-dashoffset:0"
+               id="path12377-4-7-5-5"
+               inkscape:flatsided="true"
+               sodipodi:sides="3"
+               sodipodi:cx="24.249119"
+               sodipodi:cy="58.731808"
+               sodipodi:r1="39.570099"
+               sodipodi:r2="19.785049"
+               sodipodi:arg1="0.52359878"
+               sodipodi:arg2="1.5707963"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 58.51783,78.516857 -68.537422,0 34.268711,-59.355148 z"
+               inkscape:transform-center-y="-6.4509814"
+               transform="matrix(0.65210685,0,0,0.65210685,128.07552,66.045024)"
+               inkscape:export-filename="Cesiumprojekt_2024\standardmodell\images\mesh-v2.svg"
+               inkscape:export-xdpi="104.47401"
+               inkscape:export-ydpi="104.47401" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

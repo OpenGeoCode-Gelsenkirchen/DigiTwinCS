@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de" translate="no">
+
+<head>
+    <meta charset="utf-8" />
+    <meta data-i18n="[content]common:header.meta.description" />
+    <meta data-i18n="[content]common:header.meta.author">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title data-i18n="common:header.title.html"></title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.ico">
+
+    <!--<link rel="stylesheet" href="lib/leaflet-1.7.1/leaflet.css" />-->
+    <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/files/dist/leaflet.css" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
+
+    <link rel="stylesheet" href="lib/jquery-ui-1.13.1/jquery-ui.css" />
+    <!--<link rel="stylesheet" href="https://unpkg.com/jquery-ui@1.13.1/files/themes/base/theme.css" />-->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/themes/base/theme.min.css">-->
+
+    <link rel="stylesheet" href="src/theme.module.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/base.css" />
+    <link rel="stylesheet" href="src/helpers.css" />
+    <link rel="stylesheet" href="src/responsive.css" />
+
+    <script src="https://unpkg.com/deepmerge@4.3.1/dist/umd.js"></script>
+
+    <!--<script src="lib/jquery-3.6.0/jquery.js"></script>-->
+    <!--<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script src="lib/jquery-ui-1.13.1/jquery-ui.js"></script>
+    <!--<script src="https://unpkg.com/jquery-ui@1.13.1/files/build/release.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/jqueryui@1.11.1/jquery-ui.min.js"></script>-->
+
+    <script src="src/init.js" type="module"></script>
+</head>
+
+<body class="_unmargin">
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <ge-header data-gui-element></ge-header>
+
+    <div id="cesium-container"></div>
+    <div id="address" data-gui-element>
+        <div id="menubutton" data-i18n="[title]common:body.address.menu">
+            <img draggable="false" src="./images/common/menu.svg">
+        </div>
+        <div id="autocomplete">
+            <input id="searchinput" type="text" data-i18n="[placeholder]common:body.address.search">
+        </div>
+    </div>
+    <div class="up-right-wrapper">
+        <div id="compass" data-i18n="[title]common:body.compass" data-gui-element>
+            <img class="disable-visual-search" draggable="false" />
+        </div>
+        <ge-baselayerpicker data-gui-element id="baseLayerPicker"
+            data-i18n="common:body.baseLayerPicker.header"></ge-baselayerpicker>
+    </div>
+    <ge-footer data-gui-element></ge-footer>
+
+    <div id="content" data-i18n="[title]common:body.layer-overview.title" width="400" height="350" x="center" y="center"
+        winbox>
+        <h3 data-i18n="common:body.layer-overview.3d-header"></h3>
+        <div class="basic-color">
+            <table id="D3Table" class="threedmtable"></table>
+            <table id="singlemodelTable"></table>
+        </div>
+        <h3 id="content-mesh-header" data-i18n="common:body.layer-overview.mesh-header"></h3>
+        <div id="content-mesh-table" class="basic-color">
+            <table id="MeshTable" class="threedmtable"></table>
+        </div>
+        <h3 data-i18n="common:body.layer-overview.2d-header"></h3>
+        <div>
+            <table id="localdataTable" class="dataTable"></table>
+        </div>
+        <h3 data-i18n="common:body.layer-overview.hidden-header"></h3>
+        <div id="hiddenModels" class="basic-color">
+            <table id="hiddenTable" class="dataTable"></table>
+            <div id="deletion-list"></div>
+            <div id="wrapper-deletion-list">
+                <ge-button shape="rectangle" size="medium" showborder id="export-deletion-list"
+                    data-i18n="common:body.layer-overview.hide.export"></ge-button>
+                <ge-button shape="rectangle" size="medium" showborder id="import-deletion-list"
+                    data-i18n="common:body.layer-overview.hide.import"></ge-button>
+                <input type="file" hidden multiple id="upload_inp" accept="text/plain,.csv">
+            </div>
+        </div>
+    </div>
+    <div id="model-container" title="Inspektor" width="400px" height="70%" , y="center" winbox>
+        <div class="widget-l3">
+            <div data-i18n="common:body.inspector.actions.header"></div>
+            <div class="model-container-actions">
+                <ge-button data-i18n="[title]common:body.inspector.actions.delete.title" id="model-container-delete"
+                    shape="square" src="./images/common/trash.svg" size="extra-small"></ge-button>
+            </div>
+        </div>
+        <div class="widget-l3">
+            <div data-i18n="common:body.inspector.transformation.header"></div>
+            <div class="widget-l4">
+                <label id="position-header" data-i18n="common:body.inspector.transformation.translation.header"></label>
+
+                <label data-i18n="common:body.inspector.transformation.translation.x" id="rw-label" for="rw"></label>
+                <input id="rw-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.translation.y" id="hw-label" for="hw"></label>
+                <input id="hw-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.translation.height" id="height-label"
+                    for="height"></label>
+                <input id="height-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.snap" id="pos-snap-label"></label>
+                <select id="pos-snap-inp" class="input-field">
+                    <option value=50>50</option>
+                    <option value=10>10</option>
+                    <option value=1>1</option>
+                    <option value=0.1>0.1</option>
+                    <option value=0 selected="selected">0</option>
+                </select>
+                <button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-translation'
+                    class='inspector-button reset-button'></button>
+
+                <label id="rotation-header" data-i18n="common:body.inspector.transformation.rotation.header"></label>
+
+                <label data-i18n="common:body.inspector.transformation.rotation.x" id="x-rot-label"
+                    for="x-rot-inp"></label>
+                <input id="x-rot-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.rotation.y" id="y-rot-label"
+                    for="y-rot-inp"></label>
+                <input id="y-rot-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.rotation.z" id="z-rot-label"
+                    for="z-rot-inp"></label>
+                <input id="z-rot-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.snap" id="rot-snap-label"></label>
+                <select id="rot-snap-inp" class="input-field">
+                    <option value=45>45</option>
+                    <option value=10>10</option>
+                    <option value=5>5</option>
+                    <option value=1>1</option>
+                    <option value=0 selected="selected">0</option>
+                </select>
+                <button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-rotation'
+                    class='inspector-button reset-button' title="Zurücksetzen"></button>
+
+                <label data-i18n="common:body.inspector.transformation.scale.header" id="scale-header"></label>
+                <label data-i18n="common:body.inspector.transformation.scale.x" id="x-scale-label"
+                    for="x-scale-inp"></label>
+                <input id="x-scale-inp" type="number" class="input-field">
+                <label data-i18n="common:body.inspector.transformation.scale.y" id="y-scale-label"
+                    for="y-scale-inp"></label>
+                <input id="y-scale-inp" type="number" class="input-field">
+                <label data-i18n="common:body.inspector.transformation.scale.z" id="z-scale-label"
+                    for="z-scale-inp"></label>
+                <input id="z-scale-inp" type="number" class="input-field">
+
+                <label data-i18n="common:body.inspector.transformation.snap" id="scale-snap-label"></label>
+                <select id="scale-snap-inp" class="input-field">
+                    <option value=100>100</option>
+                    <option value=10>10</option>
+                    <option value=1>1</option>
+                    <option value=0.1>0.1</option>
+                    <option value=0.01>0.01</option>
+                    <option value=0 selected="selected">0</option>
+                </select>
+                <button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-scale'
+                    class='inspector-button reset-button'></button>
+
+                <div id="ground-clamp">
+                    <input type="checkbox" id="ground-clamp-cb" checked>
+                    <label data-i18n="common:body.inspector.transformation.clamp-ground" id="ground-clamp-label"
+                        for="ground-clamp-cb"></label>
+                </div>
+                <div id="apply-div">
+                    <ge-button data-i18n="common:body.inspector.transformation.apply-settings" id="apply-btn"
+                        shape="rectangle" size="long"></ge-button>
+                </div>
+                <div id="uni-scale">
+                    <input type="checkbox" id="uni-scale-cb" checked>
+                    <label data-i18n="common:body.inspector.transformation.uniform-scale" id="uni-scale-label"
+                        for="uni-scale-cb"></label>
+                </div>
+                <button data-i18n="[title]common:body.inspector.transformation.translation.header"
+                    id='translation-widget' class='inspector-button' title="Translation"></button>
+                <button data-i18n="[title]common:body.inspector.transformation.rotation.header" id='rotation-widget'
+                    class='inspector-button' title="Rotation"></button>
+                <button data-i18n="[title]common:body.inspector.transformation.scale.header" id='scale-widget'
+                    class='inspector-button' title="Skalierung"></button>
+            </div>
+        </div>
+        <div class="widget-l3">
+            <div data-i18n="common:body.inspector.control.header"></div>
+            <div id="control-widget">
+                <button
+                    data-i18n="[title]common:body.inspector.control.north.title;common:body.inspector.control.north.text"
+                    id='north-widget' class='inspector-button cesium-toolbar-button'
+                    style='font-size: 25px; margin: 10px 10px 10px 10px;'></button>
+                <button
+                    data-i18n="[title]common:body.inspector.control.south.title;common:body.inspector.control.south.text"
+                    id='south-widget' class='inspector-button cesium-toolbar-button'
+                    style='font-size: 25px; margin: 10px 10px 10px 10px;'></button>
+                <button id='west-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.west.title;common:body.inspector.control.west.text"
+                    style='font-size: 25px; margin: 10px 10px 10px 10px;'></button>
+                <button id='east-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.east.title;common:body.inspector.control.east.text"
+                    style='font-size: 25px; margin: 10px 10px 10px 10px;'></button>
+                <button id='up-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.up" style='margin: 10px 10px 10px 10px;'>
+                    <img class="disable-visual-search" src='./images/common/north.svg' width='20' height='20'>
+                </button>
+                <button id='down-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.down" style='margin: 10px 10px 10px 10px;'>
+                    <img class="disable-visual-search" src='./images/common/south.svg' width='20' height='20'>
+                </button>
+                <button id='clock-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.cw" style='margin: 10px 10px 10px 10px;'>
+                    <img class="disable-visual-search" src='./images/common/clockwise.svg' width='20' height='20'>
+                </button>
+                <button id='counter-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.ccw" style='margin: 10px 10px 10px 10px;'>
+                    <img class="disable-visual-search" src='./images/common/counterclockwise.svg' width='20'
+                        height='20'>
+                </button>
+                <button id='drop-widget' class='inspector-button cesium-toolbar-button'
+                    data-i18n="[title]common:body.inspector.control.clamp-ground" style='margin: 10px 10px 10px 10px;'>
+                    <img class="disable-visual-search" src='./images/common/down.svg' width='20' height='20'>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div data-i18n="[title]common:body.overview-map" data-gui-element id="overview-map" minwidth="150px"
+        minheight="150px" width="300px" height="300px" winbox></div>
+
+    <div data-i18n="[title]common:body.theme-map" id="themeMapContainer" x="center" y="center" winbox>
+        <ge-grid id="themeMap-grid"></ge-grid>
+    </div>
+    <div data-i18n="[title]common:body.settings.title" id="settingsContainer" winbox width="400px" height="300px"
+        x="center" y="center">
+        <ge-slider data-i18n="[description]common:body.settings.opacity" id="opacity-slider" max="1.00" min="0"
+            start-value="1" step="0.01" precision="2"></ge-slider>
+        <div id="graphicSettings">
+            <h3 data-i18n="common:body.settings.graphics-profile">Qualitätsprofil</h3>
+            <select name="g" id="graphicProfileSelection">
+                <option data-i18n="common:body.settings.profile.low" value="low"></option>
+                <option data-i18n="common:body.settings.profile.medium" value="medium"></option>
+                <option data-i18n="common:body.settings.profile.high" value="high"></option>
+                <option data-i18n="common:body.settings.profile.ultra" value="ultra"></option>
+            </select>
+        </div>
+    </div>
+
+    <div id="toolsContainer" data-i18n="[title]common:body.tools.title" width="401px" height="400px" x="center"
+        y="center" winbox>
+        <div id="tools">
+            <h3 data-i18n="common:body.tools.shadow"></h3>
+            <div>
+                <ge-shadow-control
+                    data-i18n="[toggle-label]ge-shadow-control:toggle-label;[calendar-label]ge-shadow-control:calendar-label;[slider-label]ge-shadow-control:slider-label;[time-label]ge-shadow-control:time-label;"></ge-shadow-control>
+            </div>
+            <h3 data-i18n="common:body.tools.excavation.header"></h3>
+            <div class="menu-div">
+                <div id="excavationPitDiv">
+                    <ge-button showborder shape="square" size="medium" id="excavationBtn"
+                        src="./images/common/shovel.svg" title="Baugrube manuell setzen"></ge-button>
+                    <ge-button
+                        data-i18n="common:body.tools.excavation.import.text;[title]common:body.tools.excavation.import.title"
+                        showborder shape="rectangle" size="medium" id="excavationImportBtn"></ge-button>
+                    <ge-button
+                        data-i18n="common:body.tools.excavation.export.text;[title]common:body.tools.excavation.export.title"
+                        showborder shape="rectangle" size="medium" id="excavationExportBtn"></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.excavation.delete" showborder shape="square"
+                        size="medium" img-size="small" id="excavationDeleteAllBtn"
+                        src="./images/common/trash.svg"></ge-button>
+                </div>
+                <ge-list id="excavationPitList"></ge-list>
+            </div>
+            <h3 data-i18n="common:body.tools.measure.header"></h3>
+            <div class="menu-div">
+                <div class="tools-style">
+                    <ge-button data-i18n="[title]common:body.tools.measure.polygon" id="polyMeasureBtn"
+                        title="Schrägfläche" shape="square" size="extra-small" src="./images/common/area.svg" showborder
+                        toggle></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.measure.polyline" id="lineMeasureBtn" shape="square"
+                        size="extra-small" src="./images/common/line.svg" showborder toggle></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.measure.height" id="heightMeasureBtn" shape="square"
+                        size="extra-small" src="./images/common/height.svg" showborder toggle></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.measure.building.length" id="lengthMeasureBtn"
+                        shape="square" size="extra-small" src="./images/common/measureBuildingLength.svg" showborder
+                        toggle></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.measure.building.area" id="areaMeasureBtn"
+                        shape="square" size="extra-small" src="./images/common/measureBuildingArea.svg" showborder
+                        toggle></ge-button>
+                    <ge-button data-i18n="[title]common:body.tools.measure.delete" id="deleteMeasurementsBtn"
+                        src="./images/common/trash.svg" shape="square" size="extra-small" showborder></ge-button>
+                </div>
+                <ge-list id="measurementList"></ge-list>
+                <div id="exportMeasurementsDiv">
+                    <div>
+                        <input id="exportInLocalCRS" type="checkbox">
+                        <label data-i18n="common:body.tools.measure.export.local" for="exportInLocalCRS"></label>
+                    </div>
+                    <button data-i18n="common:body.tools.measure.export.export" id="exportMeasurementsBtn"
+                        class="cesium-button"></ge-button>
+                </div>
+            </div>
+            <h3 data-i18n="common:body.tools.analysis.header"></h3>
+            <div class="menu-submenu">
+                <h3 data-i18n="common:body.tools.analysis.water.header" class="menu-subitem"></h3>
+                <div class="tools-style">
+                    <div id="pegelbar">
+                        <ge-button data-i18n="[title]common:body.tools.analysis.water.toggle" id="waterLevelButton"
+                            src="./images/common/wave.svg" shape="square" size="small" toggle></ge-button>
+                        <ge-button data-i18n="[title]common:body.tools.analysis.water.click" id="waterLevelClick"
+                            src="./images/common/mouse-click.svg" shape="square" size="small" toggle>
+                        </ge-button>
+                        <ge-slider
+                            data-i18n="[description]common:body.tools.analysis.water.slider;[suffix]common:body.tools.analysis.water.suffix"
+                            id="waterlevel-slider" max="100" min="25" start-value="25" step="0.5"
+                            precision="2"></ge-slider>
+                    </div>
+                </div>
+                <h3 data-i18n="common:body.tools.analysis.visibility.header" class="menu-subitem"></h3>
+                <div>
+                    <div class="tools-style visibility-row">
+                        <ge-button data-i18n="[title]common:body.tools.analysis.visibility.toggle" id="visibility-btn"
+                            shape="square" size="small" src="./images/common/eye.svg" toggle></ge-button>
+                        <ge-input-field data-i18n="[suffix]common:body.tools.analysis.visibility.input"
+                            id="visibility-input" position="front" validation-strategy="positive-float" min="0"
+                            step="0.1" precision="1" start-value="2"></ge-input-field>
+                    </div>
+                    <div class=" tools-color">
+                        <ge-slider
+                            data-i18n="[description]common:body.tools.analysis.visibility.distance;[suffix]common:body.tools.analysis.visibility.suffix"
+                            id="distance-slider" name="max. Distanz" min="50" max="2000" start-value="300" step="50"
+                            label-text="m" precision="0"></ge-slider>
+                    </div>
+                </div>
+            </div>
+            <h3 data-i18n="common:body.tools.print.header"></h3>
+            <div>
+                <div id="printButton" class="btn">
+                    <p data-i18n="common:body.tools.print.export.pdf"></p>
+                </div>
+                <div id="printButton2" class="btn">
+                    <p data-i18n="common:body.tools.print.export.png"></p>
+                </div>
+            </div>
+            <h3 data-i18n="common:body.tools.share.header"></h3>
+            <div id="link-share-div" class="tools-style">
+                <p data-i18n="common:body.tools.share.description"></p>
+                <ge-button data-i18n="common:body.tools.share.button" id="link-share-button" shape="rectangle"
+                    size="medium"></ge-button>
+            </div>
+        </div>
+    </div>
+    <!--WMS-Service-->
+    <div data-i18n="[title]common:body.wms.header" id="theme-menu" x="center" y="center" winbox>
+        <div id="theme-list">
+        </div>
+        <div id="button-list" class="button-list">
+            <button data-i18n="glossary:continue" id="add-theme-button" class="cesium-button" type="button"></button>
+        </div>
+    </div>
+
+    <ge-bar data-gui-element id="tool-bar" direction="column">
+
+        <ge-button data-i18n="[title]common:body.toolbar.zoom.pos" id="pos_zoom_btn" size="small" shape="square"
+            src="./images/common/plus.svg"></ge-button>
+        <ge-button data-i18n="[title]common:body.toolbar.zoom.neg" id="neg_zoom_btn" size="small" shape="square"
+            src="./images/common/minus.svg"></ge-button>
+        <ge-collapse direction="row" position="back" src="./images/common/dot-matrix.svg"
+            data-i18n="[title]common:body.toolbar.toggle" collapsed>
+            <ge-bar direction="row">
+                <ge-button data-i18n="[title]common:body.toolbar.home" id="home_btn" size="small" shape="square"
+                    src="./images/common/home.svg"></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.gps" id="location_btn" size="small" shape="square"
+                    src="./images/common/marker.svg"></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.pedestrian" id="pedestrian_btn" size="small"
+                    shape="square" src="./images/common/pedestrian.svg" toggle></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.opacity" id="opacity-btn" size="small" shape="square"
+                    src="./images/common/ground-transparency.svg" toggle></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.texture" id="texture-btn" size="small" shape="square"
+                    src="./images/common/test.svg" toggle></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.mesh" id="mesh_btn" size="small" shape="square"
+                    src="./images/common/mesh-v2.svg" toggle></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.map" id="map_btn" size="small" shape="square"
+                    src="./images/common/map.svg" active></ge-button>
+                <ge-button data-i18n="[title]common:body.toolbar.share" id="share_btn" size="small" shape="square"
+                    src="./images/common/share.svg"></ge-button>
+            </ge-bar>
+        </ge-collapse>
+    </ge-bar>
+
+    <div id="sidebar">
+        <div data-i18n="common:body.sidebar.header" id="menutitle">
+            <button id="sidebar-button-close">
+                <img draggable="false" src="./images/common/closemenu.svg" width="25" height="25">
+            </button>
+        </div>
+        <ul id="menu">
+            <li>
+                <div data-i18n="common:body.sidebar.layers" id="contentMenu" class="highlight menuitem">
+                    placeholder
+                </div>
+            </li>
+            <li id="dynamicContent">
+                <div data-i18n="common:body.sidebar.add-content.header" class="highlight menuitem">
+                    placeholder
+                </div>
+                <ul id="subsidebar">
+                    <li>
+                        <div id="addCubeDiv" class="highlight subsidebar-item">
+                            <div class="subsidebar_flex">
+                                <img draggable="false" src="./images/common/add-cube.svg">
+                                <span data-i18n="common:body.sidebar.add-content.insert-default">placeholder</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="model-menu-button-start" class="highlight subsidebar-item">
+                            <div class="subsidebar_flex">
+                                <img draggable="false" src="./images/common/data.svg">
+                                <span data-i18n="common:body.sidebar.add-content.insert-gltf">
+                                    placeholder
+                                    <input type="file" id="singlemodels" multiple style="display: none;">
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="wms-menu-switch" class="highlight subsidebar-item">
+                            <div class="subsidebar_flex">
+                                <img draggable="false" src="./images/common/data.svg">
+                                <span data-i18n="common:body.sidebar.add-content.insert-wms">placeholder</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="highlight subsidebar-item" onclick="document.getElementById('localfiles').click();">
+                            <div class="subsidebar_flex">
+                                <img draggable="false" src="./images/common/data.svg">
+                                <input type="file" id="localfiles" multiple accept=".json, .geojson"
+                                    style="display: none;" />
+                                <span data-i18n="common:body.sidebar.add-content.insert-geojson">
+                                    placeholder
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="highlight subsidebar-item"
+                            onclick="document.getElementById('localfiles_image').click();">
+                            <div class="subsidebar_flex">
+                                <img draggable="false" src="./images/common/data.svg">
+                                <input type="file" id="localfiles_image" multiple accept=".tif,.tiff,.geotiff"
+                                    style="display: none;" />
+                                <span data-i18n="common:body.sidebar.add-content.insert-geotiff">
+                                    placeholder
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div data-i18n="common:body.sidebar.tools" id="toolsMenu" class="highlight menuitem">
+                    placeholder
+                </div>
+            </li>
+            <li id="themeMap-div-li">
+                <div data-i18n="common:body.sidebar.theme-map" id="themeMap-div" class="highlight menuitem">
+                    placeholder
+                </div>
+            </li>
+
+            <li>
+                <div data-i18n="common:body.sidebar.settings" id="settings" class="highlight menuitem">
+                    placeholder
+                </div>
+            </li>
+            <li>
+                <div data-i18n="common:body.sidebar.help.header" id="help" class="highlight menuitem">
+                    placeholder
+                </div>
+                <ul id="subsidebar">
+                    <li>
+                        <div class="highlight menuitem">
+                            <a data-i18n="common:body.sidebar.help.manual" id="a-manual">
+                                placeholder
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div data-i18n="common:body.sidebar.help.information" id="information"
+                            class="highlight menuitem">
+                            placeholder
+                        </div>
+                    </li>
+                    <li>
+                        <div data-i18n="common:body.sidebar.help.contact" id="contact" class="highlight menuitem">
+                            placeholder
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div data-i18n="[title]common:body.contact.title;[html]common:body.contact.text" id="contact-window" winbox
+        x="center" y="center">
+    </div>
+    <div data-i18n="[title]common:body.information.title" id="information-window" title="Informationen" x="center"
+        y="center" winbox>
+        <div data-i18n="[html]common:body.information.text" id="changelog-content">
+        </div>
+    </div>
+</body>
+
+</html>

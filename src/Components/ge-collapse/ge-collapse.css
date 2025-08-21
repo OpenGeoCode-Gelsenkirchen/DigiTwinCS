@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+}
+
+:host div {
+    position: absolute;
+    display: flex;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+:host > #items {
+    transition: opacity 0.25s linear;
+    opacity: 1;
+}
+
+:host([collapsed]) > #items {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+:host([direction='row']) {
+    flex-direction: row;
+}
+
+:host([direction='row']) div {
+    flex-direction: row;
+}
+
+:host([direction='column']) {
+    flex-direction: column;
+}
+
+:host([direction='column']) div {
+    flex-direction: column;
+}

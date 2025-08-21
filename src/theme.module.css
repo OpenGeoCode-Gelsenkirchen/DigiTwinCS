@@ -1,0 +1,53 @@
+:root {
+    /* Typography */
+    --font-family-primary: 'Lato', sans-serif;
+    --font-size-base: clamp(0.8rem, 0.8rem + 0.4vw, 2rem);
+    --font-size-secondary: clamp(0.65rem, 0.65rem + 0.25vw, 1.6rem);
+
+    /* Greyscale Palette */
+    --grey-900: #222222;
+    --grey-800: #484848;
+    --grey-800-alpha30: #4848484d;
+    --grey-700: #686868;
+    --grey-600: #888888;
+    --grey-500: #999999;
+
+    /* Primary Colors */
+    --primary-color-highlight: #87ceeb;
+    --primary-color-active: #87ceeb;
+    --primary-color-active-border: #ffb01e;
+
+    /* Text Colors */
+    --text-color-primary: #ffffff;
+    --text-color-warning: #5b5400;
+    --text-color-error: #5f1d16;
+
+    /* State: Warning */
+    --warning-bg: #fef6d5bb;
+    --warning: #ffeca0;
+    --warning-alpha: #ffeca0bb;
+
+    /* State: Error */
+    --error-bg: #eed9d590;
+    --error: #d29c94;
+    --error-alpha: #d29c94bb;
+
+    --color-primary: var(--grey-800);
+    --color-primary-alpha30: var(--grey-800-alpha30);
+    --color-secondary: var(--grey-700);
+    --color-tertiary: var(--grey-600);
+    --color-quaternary: var(--grey-900);
+    --color-quinary: var(--grey-500);
+}
+
+:export {
+    colorPrimary: var(--color-primary);
+    colorSecondary: var(--color-secondary);
+    colorTertiary: var(--color-tertiary);
+    colorQuaternary: var(--color-quaternary);
+    colorQuinary: var(--color-quinary);
+
+    textColorPrimary: var(--text-color-primary);
+    colorHighlight: var(--color-primary);
+    colorActive: var(--color-primary-active);
+}

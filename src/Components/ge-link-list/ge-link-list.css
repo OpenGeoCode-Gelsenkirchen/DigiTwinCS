@@ -1,0 +1,22 @@
+:host {
+    color: var(--text-color-primary);
+    background-color: var(--color-primary);
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-family-primary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.link-list > *:hover {
+    color: var(--primary-color-highlight);
+    flex-shrink: 0;
+}
