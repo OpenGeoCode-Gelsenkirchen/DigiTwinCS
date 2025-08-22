@@ -67,7 +67,32 @@ Path or URL to the locales folder. Inside this folder, subdirectories with ISO�
 "locales": "./locales/"
 ```
 
-## <br>
+<br>
+
+---
+
+## Boundaries
+
+**Required:** ✅
+
+Sets the translation boundaries (in project coordinate system format) for loaded gltf models. Does not act on the camera at the moment.
+
+**Example**:
+
+```
+"boundaries": {
+    "x": {
+        "min": 355000,
+        "max": 375000
+    },
+    "y": {
+        "min": 5702000,
+        "max": 5723000
+    }
+},
+```
+
+<br>
 
 ## Camera
 
@@ -333,6 +358,74 @@ A list of linked applications/websites displayed to the user.
     }
 ]
 ```
+
+<br>
+
+---
+
+## Deletion List Suffix
+
+**Required:** ❌
+
+Sets the suffix for the deletion list filenames.
+
+<br>
+
+---
+
+## Default GLTF URL
+
+**Required:** ❌
+
+If this is set, users can place a default gltf object in the scene (`Model menu` -> `Add content`).
+
+<br>
+
+---
+
+## Datetime
+
+**Required:** ❌
+
+Sets the scene's datetime accordingly. A ISO-8601 string is necessary.
+
+**Example**:
+
+```
+    "datetime": {
+        "iso8601": "2025-07-01T10:00:00Z"
+    }
+```
+
+<br>
+
+---
+
+## WMS List URL
+
+**Required:** ❌
+
+If this is set, the list of WMS services will get queried during startup which enables adding WMS content to the scene. The WMS list has to have the following shape (.txt).
+
+### WMSList.txt
+
+```
+WMS-Name 1; https://example.de/url/to/my/WMS1/guest
+WMS-Name 2; https://example.de/url/to/my/WMS2/guest
+```
+
+**Example**:
+
+Set `resolve` to `false`, otherwise the list will get resolved before reaching the WMS component.
+
+```
+"wmsListUrl": {
+    "url": "https://example.com/WMSList.txt",
+    "resolve": false
+},
+```
+
+<br>
 
 ---
 
@@ -723,7 +816,7 @@ Mixed layers are a special case. They can combine 2D (vector and raster) and 3D 
 
 **Required:** ❌
 
-2D dataset configuration. Each key is equal to the layer name.
+2D dataset configuration. Each key is equal to the layer name. Valid configuration parameters depend on the actual 2D entity type (e.g. `polygon`, `polyline`, `point`).
 
 ### Properties of a 2D dataset (e.g. `"Example File"`)
 
@@ -731,14 +824,102 @@ Mixed layers are a special case. They can combine 2D (vector and raster) and 3D 
 - `target`: (`string`) Target or data category (e.g. `"file"`).
 - `show`: (`boolean`) Should the layer be initially visible?
 - `table`: (`boolean`) Should data be shown in a table?
-- `ableToDelete`: (`boolean`) Is the dataset deletable by the user?
+- `deletable`: (`boolean`) Is the dataset deletable by the user?
+- `selectable`: (`boolean`) Is the entity selectable?
 - `color`: (`string`) Color value (e.g. `"rgba(0,0,140,0.7)"`).
 - `clampToGround`: (`boolean`) Should features be clamped to the ground?
 - `credit`: (`string`) HTML attribution string.
+- `markerSymbol`: (`string`) Text inside Cesium's standard point marker.
+- `markerSize`: (`number`) Sets the marker size. Not used for billboard.
+- `billboardSource`: (`string`) URL referencing an image file. If this is set, the point entity is overwritten by the billboard.
+- `billboardScale`: (`number`) Billboard scaling factor.
+- `billboardVerticalOrigin`: (`enum`) Vertical location of an origin relative to an object. Possible values: `BOTTOM`, `CENTER`, `TOP`
+- `height`: (`number`) Height above reference (see heightReference)
+- `heightReference`: (`enum`) Height reference used for `height`. Possible values `NONE`, `CLAMP_TO_GROUND`, `RELATIVE_TO_GROUND`. Default `NONE`.
+- `tableAttributes`: (`object`) Object consisting of key-label pairs. `Key` has to reference the actual entity attribute name. `Label` is used for displaying in the infobox (you can use an i18n translation token as well).
 
-<br>
-<br>
+```
+    "2D Example": {
+        "url": "https://example.com/example.geojson",
+        "target": "2d",
+        "show": true,
+        "table": true,
+        "markerSymbol": "?",
+        "billboardSource": "./images/myBillboard.svg",
+        "billboardScale": 0.05,
+        "billboardVerticalOrigin": "TOP",
+        "height": 30,
+        "heightReference": "RELATIVE_TO_GROUND",
+        "markerSize": 25,
+        "selectable": true,
+        "deletable": false,
+        "clampToGround": true,
+        "type": "geojson",
+        "tableAttributes": {
+            "Place": "Place",
+            "Height": "billboard:height"
+        }
+    }
 
+```
+
+  <br>
+  <br>
+
+---
+
+## Particle Systems
+
+**Required:** ❌
+
+You can define particle systems inside the config. Particle system layers will not appear in the model menu. You can instead bind particle systems to registered features (Cesium3DTileFeature and Geojson3D. UUID needed).
+
+Configuration parameters are derived from [Cesium.js](https://cesium.com/learn/cesiumjs/ref-doc/ParticleSystem.html?classFilter=particle)
+
+**Example**:
+
+```
+ "particleSystems": [
+        {
+            "targetId": "R1402_K123",
+            "coordinates": [343958.21, 5609938.04, 54.8], //coordinates in project coordinate system
+            "imagePath": "./images/smoke.png",
+            "imageSize": [20, 20],
+            "startScale": 50,
+            "endScale": 50,
+            "particleLife": 1,
+            "speed": 1.5,
+            "startColor": [1, 1, 1, 1],
+            "endColor": [1, 1, 1, 0],
+            "emitter": ["ConeEmitter", 50],
+            "emissionRate": 40.0,
+            "lifetime": 16.0,
+            "direction": [0, 0.2, 0.9],
+            "forceFactor": 2
+        },
+        {
+            "targetId": "R1402_R5598",
+            "coordinates": [369691.56, 5749842.77, 101],
+            "imagePath": "./images/smoke2.png",
+            "imageSize": [20, 20],
+            "startScale": 270,
+            "endScale": 270,
+            "particleLife": 8,
+            "speed": 2,
+            "startColor": [1, 1, 1, 0.8],
+            "endColor": [1, 1, 1, 0],
+            "emitter": ["ConeEmitter", 15],
+            "emissionRate": 50.0,
+            "lifetime": 16.0,
+            "direction": [0.1, 0.6, 0.6],
+            "forceFactor": 2
+        }
+    ]
+
+```
+
+  <br>
+  <br>
 ---
 
 ## styling

@@ -6,9 +6,9 @@ category: Guides
 
 # Getting started
 
-This application is available as a github repository or [prebuilt source files](https://repo.github.com/source). If you download the prebuilt source files or the zipped repository, you have to unzip them first.
+This application is available as a github repository and will be available as [prebuilt source files](https://repo.github.com/source) in the future. If you download the prebuilt source files or the zipped repository, you have to unzip them first.
 
-If you are using the prebuilt source files, you can skip this part move directly to [Configuration](./Configuration.md). Using prebuilt source files does not allow for easy modifcations of source code.
+If you are using the prebuilt source files, you can skip this part move directly to [Configuration Files](./ConfigurationFiles.md). Using prebuilt source files does not allow for easy modifcations of source code.
 
 ## Installation
 
@@ -22,6 +22,8 @@ This project uses vite as a bundler and http server for development. Vite's beha
 
 ## NPM Commands
 
+### Development Server
+
 ```
 npm run dev
 ```
@@ -29,6 +31,8 @@ npm run dev
 Starts a server running the application in development mode (hot modules replacement, faster rebuilds, etc.). In your console output, you can see the actual url it's running on (e.g. localhost:5173)
 
 ---
+
+### Production Server
 
 ```
 npm run preview
@@ -38,6 +42,8 @@ Starts a server running the application in production mode (produciton-optimized
 
 ---
 
+### Building
+
 ```
 npm run build --mode ENVIRONMENT_NAME
 ```
@@ -46,6 +52,8 @@ Builds and bundles all source files into the `dist` output directory. These file
 
 ---
 
+### Documentation
+
 ```
 npx typedoc
 ```
@@ -53,6 +61,8 @@ npx typedoc
 Builds the documentation files and puts them in the `documents` folder.
 
 ---
+
+### Serving documentation
 
 ```
 npm run docs
