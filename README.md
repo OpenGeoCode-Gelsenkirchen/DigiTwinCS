@@ -91,8 +91,8 @@ For detailed usage, check the `docs` folder.
     - Prebuilt files are **not available yet** but will be offered in the future.  
       For now, please clone and build from the repository.
 
-- **Legacy/ Code**
+- **Legacy Code**
 
-    - Some source files are complex, hard to understand, or in need of cleanup (specifically the styling, loading and application logic). Those should get rewritten in the future.
+    - Some source files are overly complex, hard to understand, or in need of cleanup (e.g. styling, loading and application logic). Those should get rewritten in the future.
 
 ---
