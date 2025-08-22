@@ -14,7 +14,7 @@ A full working example can be found [here](https://geo.gelsenkirchen.de/3dstadtm
 This application is available as a GitHub repository.  
 _The option to download prebuilt source files will be available soon._
 
-For detailed technical documentation and API reference, see the [`docs`](./docs/) directory (generated with Typedoc).
+For detailed technical documentation and API reference, look [here](https://opengeocode-gelsenkirchen.github.io/DigiTwinCS/) (generated with Typedoc).
 
 ## Installation
 
