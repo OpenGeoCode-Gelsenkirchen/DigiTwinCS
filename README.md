@@ -11,9 +11,9 @@ A full working example can be found [here](https://geo.gelsenkirchen.de/3dstadtm
 
 # Getting started
 
-This application is available as a github repository and will be available as [prebuilt source files](https://repo.github.com/source) in the future. If you download the prebuilt source files or the zipped repository, you have to unzip them first.
+This application is available as a github repository and will be available as prebuilt source files in the future. If you download the prebuilt source files or the zipped repository, you have to unzip them first.
 
-If you are using the prebuilt source files, you can skip this part move directly to [Configuration Files](./ConfigurationFiles.md). Using prebuilt source files does not allow for easy modifcations of source code.
+If you are using the prebuilt source files, you can skip this part move directly to Configuration Files. Using prebuilt source files does not allow for easy modifcations of source code.
 
 ## Installation
 
@@ -105,8 +105,6 @@ npx tsc --noEmit
 ```
 
 The `--noEmit` flag is needed, so no output files are compiled.
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -119,7 +117,6 @@ The following commmand would update @cesium/engine to version 26.3.0.
 ```
 npm update @cesium/engine@26.3.0
 ```
->>>>>>> c3b66ac2 (change: docs)
 
 ## Configuration
 
