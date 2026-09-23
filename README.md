@@ -80,12 +80,6 @@ For detailed usage, check the `docs` folder.
 
 ## Important Notes
 
-- **Configurable vs. Hard-Coded Parts**
-
-    - There are currently **two components** which cannot be configured via config files and must be changed directly in the code.
-    - waterLevel.js Line 114/115 - set urls accordingly
-    - constants.js Line 31-46 - set height attribute
-
 - **Prebuilt Files Coming Soon**
 
     - Prebuilt files are **not available yet** but will be offered in the future.  
