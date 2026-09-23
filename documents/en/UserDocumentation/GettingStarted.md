@@ -100,3 +100,15 @@ npx tsc --noEmit
 ```
 
 The `--noEmit` flag is needed, so no output files are compiled.
+
+---
+
+### Updating npm packages
+
+You can update packages with `npm update packageName`. If you want to update to a specific version use `npm update packageName@version`
+
+The following commmand would update @cesium/engine to version 26.3.0.
+
+```
+npm update @cesium/engine@26.3.0
+```
