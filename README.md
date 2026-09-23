@@ -11,12 +11,26 @@ A full working example can be found [here](https://geo.gelsenkirchen.de/3dstadtm
 
 # Getting started
 
-This application is available as a GitHub repository.  
-_The option to download prebuilt source files will be available soon._
+This application is available as a github repository and will be available as [prebuilt source files](https://repo.github.com/source) in the future. If you download the prebuilt source files or the zipped repository, you have to unzip them first.
 
-For detailed technical documentation and API reference, look [here](https://opengeocode-gelsenkirchen.github.io/DigiTwinCS/) (generated with Typedoc).
+If you are using the prebuilt source files, you can skip this part move directly to [Configuration Files](./ConfigurationFiles.md). Using prebuilt source files does not allow for easy modifcations of source code.
 
 ## Installation
+
+If you are behind a company proxy, you have to create or modify your `.npmrc` file in your user directory. In there you have to add the company proxy like
+
+```
+strict-ssl=false
+https-proxy=http://username:password@proxy.example.com:8000
+proxy=http://username:password@proxy.example.com:8000
+```
+
+Alternatively you can execute the following two commands to add the environment variables to your configuration file.
+
+```
+npm config set proxy http://username:password@proxy.example.com:8000
+npm config set https-proxy http://username:password@proxy.example.com:8000
+```
 
 After cloning the repository, open a terminal and change into the project directory and execute the following command. This will install all necessary packages under `node_modules`.
 
@@ -48,10 +62,14 @@ Starts a server running the application in production mode (produciton-optimized
 
 ---
 
-### Build
+### Building
 
 ```
-npm run build --mode ENVIRONMENT_NAME
+//to build the application with default environment
+npm run build
+
+//or alternatively with a specific environment
+npx vite build --mode ENVIRONMENT_NAME
 ```
 
 Builds and bundles all source files into the `dist` output directory. These files match the prebuilt source files from the github repo and can be served by a http server. `ENVIRONMENT_NAME` should be replaced by the actual environment name one wants to build. If `--mode` is not used, vite will look for `.env`, `.env.production`, `.env.local` and `.env.production.local` in that specific order.
@@ -64,15 +82,29 @@ Builds and bundles all source files into the `dist` output directory. These file
 npx typedoc
 ```
 
-Builds the documentation files and puts them in the `documents` folder.
+Builds the documentation files found in `documents` and puts them in the `docs` folder.
 
 ---
+
+### Serving documentation
 
 ```
 npm run docs
 ```
 
-Serves the generated documentation from the `docs` folder.
+Serve the built documentation files from `docs`.
+
+---
+
+### Typescript Checking
+
+Typescript checking is lazy by default. To check your whole project for errors, use the following command:
+
+```
+npx tsc --noEmit
+```
+
+The `--noEmit` flag is needed, so no output files are compiled.
 
 ## Configuration
 
