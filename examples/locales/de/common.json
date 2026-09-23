@@ -1,0 +1,298 @@
+{
+    "header": {
+        "meta": {
+            "description": "Beispielbeschreibung",
+            "author": "Autor"
+        },
+        "title": {
+            "html": "Beispieltitel",
+            "text": "Ein Beispieltext"
+        }
+    },
+    "body": {
+        "table": {
+            "hidden": {
+                "reset": "Alle Modelle wieder einblenden"
+            }
+        },
+        "cesium-credit": {
+            "text": "Datenquellen",
+            "lightbox-title": "Daten zur Verfügung gestellt von:"
+        },
+        "ge-footer": {
+            "coordinate-system": "(ETRS89 / UTM Zone 32N)"
+        },
+        "address": {
+            "menu": "Menü öffnen",
+            "search": "zur Suche bitte Adresse eingeben..."
+        },
+        "compass": "Nach Norden ausrichten",
+        "baseLayerPicker": {
+            "header": "Hintergrund, Gelände und Style",
+            "background": "Hintergrund",
+            "terrain": "Gelände",
+            "style": "Style"
+        },
+        "footer": {
+            "data-privacy": {
+                "title": "Datenschutzerklärung von Beispiel",
+                "text": "Datenschutzerklärung"
+            },
+            "imprint": {
+                "title": "Impressum von Beispiel",
+                "text": "Impressum"
+            }
+        },
+        "layer-overview": {
+            "title": "Modellinhalt",
+            "3d-header": "3D-Layer",
+            "mesh-header": "Mesh",
+            "2d-header": "2D-Layer",
+            "hidden-header": "ausgeblendete 3D-Modelle",
+            "hide": {
+                "export": "Löschliste exportieren",
+                "import": "Löschliste importieren"
+            }
+        },
+        "inspector": {
+            "actions": {
+                "header": "Aktionen",
+                "delete": {
+                    "title": "Ausgewähltes Modell löschen"
+                }
+            },
+            "transformation": {
+                "header": "Transformation",
+                "translation": {
+                    "header": "Translation",
+                    "x": "Rechtswert",
+                    "y": "Hochwert",
+                    "height": "Höhe"
+                },
+                "rotation": {
+                    "header": "Rotation",
+                    "x": "X",
+                    "y": "Y",
+                    "z": "Z"
+                },
+                "scale": {
+                    "header": "Skalierung",
+                    "x": "X",
+                    "y": "Y",
+                    "z": "Z"
+                },
+                "snap": "Einrasten",
+                "reset": "Zurücksetzen",
+                "clamp-ground": "immer an Untergrund binden",
+                "apply-settings": "Einstellungen anwenden",
+                "uniform-scale": "uniforme Skalierung"
+            },
+            "control": {
+                "header": "Steuerung",
+                "north": {
+                    "title": "Nach Norden verschieben",
+                    "text": "N"
+                },
+                "east": {
+                    "title": "Nach Osten verschieben",
+                    "text": "O"
+                },
+                "south": {
+                    "title": "Nach Süden verschieben",
+                    "text": "S"
+                },
+                "west": {
+                    "title": "Nach Westen verschieben",
+                    "text": "W"
+                },
+                "up": "Nach oben verschieben",
+                "down": "Nach down verschieben",
+                "cw": "Im Uhrzeigersinn drehen",
+                "ccw": "Gegen den Uhrzeigsinn drehen",
+                "clamp-ground": "Auf das Gelände absetzen"
+            }
+        },
+        "overview-map": "Übersichtskarte",
+        "theme-map": "Themenkarte wechseln",
+        "settings": {
+            "title": "Einstellungen",
+            "opacity": "Bodentransparenz",
+            "graphics-profile": "Qualitätsprofil",
+            "profile": {
+                "low": "Niedrig",
+                "medium": "Mittel",
+                "high": "Hoch",
+                "ultra": "Ultra"
+            }
+        },
+        "tools": {
+            "title": "Werkzeuge",
+            "shadow": "Schatten",
+            "excavation": {
+                "header": "Baugrube",
+                "import": {
+                    "text": "Baugrube importieren",
+                    "title": "Baugruben im Geojson-Format importieren"
+                },
+                "export": {
+                    "text": "Baugrube exportieren",
+                    "title": "Baugruben als Geojson exportieren"
+                },
+                "delete": "Baugruben löschen"
+            },
+            "measure": {
+                "header": "Mess-Tools",
+                "polygon": "Schrägfläche",
+                "polyline": "Schrägdistanz",
+                "height": "Höhendifferenz und horizontale Entfernung",
+                "building": {
+                    "length": "Gebäudelängen anzeigen",
+                    "area": "GEbäudeflächen anzeigen"
+                },
+                "delete": "Messungen löschen",
+                "export": {
+                    "local": "In lokalem Koordinatensystem exportieren",
+                    "export": "Messungen als DXF exportieren (EPSG: 25832)"
+                }
+            },
+            "analysis": {
+                "header": "Analyse",
+                "water": {
+                    "header": "Pegelstand",
+                    "toggle": "Pegelstand ein-/ausschalten",
+                    "click": "Pegelstand mit Mausklick setzen",
+                    "slider": "Pegelstand in m:",
+                    "suffix": "m"
+                },
+                "visibility": {
+                    "header": "Sichtbarkeitsanalyse",
+                    "toggle": "Sichtbarkeitsanalyse ein-/auschalten",
+                    "input": "rel. Höhe",
+                    "distance": "max. Distanz",
+                    "suffix": "m"
+                }
+            },
+            "print": {
+                "header": "Drucken",
+                "export": {
+                    "pdf": "als PDF exportieren",
+                    "png": "als PNG exportieren"
+                },
+                "pdf": {
+                    "file-prefix": "3D_",
+                    "title": "Beispiel PDF Titel",
+                    "contact": "Kontakt:",
+                    "contact-content": "Beispielanschrift\nStraße\nPostleitzahl\nGemeinde",
+                    "internal-license": "Nur für internen Dienstgebrauch",
+                    "license": "Datenlizenz Deutschland - Zero - Version 2.0"
+                },
+                "png": {
+                    "file-prefix": "3D_"
+                }
+            },
+            "share": {
+                "header": "Ansicht teilen",
+                "description": "Erzeugen Sie einen Link zu Ihrer aktuellen Ansicht, den Sie mit anderen Personen teilen können.",
+                "button": "Link kopieren"
+            }
+        },
+        "wms": {
+            "header": "Thema hinzuladen"
+        },
+        "toolbar": {
+            "toggle": "Werkzeugleiste öffnen/schließen",
+            "home": "Zur Ausgangsposition springen",
+            "gps": "Zur aktuellen Geräteposition springen",
+            "pedestrian": "Fußgängermodus ein-/ausschalten",
+            "opacity": "Bodentransparenz ein-/ausschalten (70%)",
+            "texture": "Texturen ein-/ausschalten",
+            "mesh": "Mesh ein-/ausschalten",
+            "map": "Übersichtskarte ein-/ausschalten",
+            "share": "Link kopieren",
+            "zoom": {
+                "pos": "Heranzoomen",
+                "neg": "Wegzoomen"
+            }
+        },
+        "sidebar": {
+            "header": "Modellmenü:",
+            "layers": "Modellinhalt",
+            "add-content": {
+                "header": "Inhalte hinzuladen",
+                "insert-default": "Standardwürfel einfügen (1m Kantenlänge)",
+                "insert-gltf": "3D-Modelle hinzuladen (GLTF/GLB)",
+                "insert-wms": "Thema hinzuladen (WMS)",
+                "insert-geojson": "Geojson hinzuladen (WGS84)",
+                "insert-geotiff": "Rasterkarten hinzuladen (GEOTIFF)"
+            },
+            "tools": "Werkzeuge",
+            "theme-map": "Themenkarte wechseln",
+            "settings": "Einstellungen",
+            "help": {
+                "header": "Hilfe",
+                "manual": "Anleitung",
+                "information": "Information",
+                "contact": "Kontakt/Fehlermeldung"
+            }
+        },
+        "contact": {
+            "title": "Kontakt",
+            "text": "<p>Beispieltext für Kontakt</p>"
+        },
+        "information": {
+            "title": "Information",
+            "text": "<p>Beispieltext für Information</p>"
+        },
+
+        "pedestrian": {
+            "title": "Fußgängermodus aktiviert",
+            "subtitle": "Zum Beenden 'ESC'-Taste drücken",
+            "content": "'W', 'A', 'S', 'D'-Tasten oder Pfeiltasten zur Bewegung\n'Leertaste' zum Sprinten\n'Linke Maustaste' halten zum Umschauen"
+        },
+        "excavation": {
+            "edit": {
+                "title": "Baugrube setzen",
+                "content": "Linksklick: Eckpunkt setzen \nRechtsklick: Baugrube fertigstellen"
+            },
+            "error": {
+                "title": "Fehler: Baugrubenerzeugung nicht möglich",
+                "content": "Baugruben sind für den Ellipsoiden nicht möglich. Bitte ein DGM aktivieren"
+            }
+        },
+        "basic-measurement": {
+            "title": "Messmodus aktiviert",
+            "content": "Linksklick: Messpunkt setzen\nRechtsklick: Messung abschließen"
+        },
+        "height-measurement": {
+            "title": "Höhenmessung aktiviert",
+            "content": "1. Linksklick: Messung starten\n2. Linksklick: Messung abschließen "
+        },
+        "building-area-measurement": {
+            "title": "Gebäudeflächenbemaßung",
+            "content": "Linksklick: Flächenbemaßung für ein Gebäude laden."
+        },
+        "building-length-measurement": {
+            "title": "Gebäudelängenbemaßungen",
+            "content": "Linksklick: Längenbemaßungen für ein Gebäude laden."
+        },
+        "viewshed": {
+            "title": "Sichtbarkeitsanalyse aktiviert",
+            "content": "1. Linksklick: Standpunkt setzen.\n2. Linksklick: Fokuspunkt setzen.\nDie gesetzten Punkte sind anschließend anwählbar und können verschoben werden."
+        },
+        "share-view": {
+            "title": "Link kopiert!",
+            "content": "Der Link wurde erfolgreich in die Zwischenablage kopiert."
+        }
+    },
+    "upload": {
+        "gltf": {
+            "title": "3D-Modell hochladen",
+            "text": "Bitte wählen Sie eine Modelldatei (.glb/.gltf) aus",
+            "confirm": "Bestätigen",
+            "cancel": "Abbrechen"
+        }
+    },
+    "Straße": "Straße",
+    "Adresse": "Adresse",
+    "Ort": "Ort"
+}

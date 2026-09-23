@@ -1,0 +1,38 @@
+img {
+    height: 100%;
+}
+
+#name {
+    font-size: 1.5rem;
+}
+
+#header-div {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    /*align-items: center;*/
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+#wrapper {
+    background-color: #000000b8;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+#close {
+    height: 1rem;
+    width: 1rem;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+#link {
+    color: var(--primary-color-highlight);
+}
+
+#link:hover {
+    color: var(--primary-color-active-border);
+}

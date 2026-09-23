@@ -1,0 +1,140 @@
+<div id="model-container" title="Inspektor">
+    <div class="widget-l3">
+        <div data-i18n="common:body.inspector.actions.header">Actions</div>
+        <div class="model-container-actions">
+            <ge-button data-i18n="[title]common:body.inspector.actions.delete.title" id="model-container-delete"
+                shape="square" src="./images/common/trash.svg" size="extra-small"></ge-button>
+        </div>
+    </div>
+    <div class="widget-l3">
+        <div data-i18n="common:body.inspector.transformation.header">Transformation</div>
+        <div class="widget-l4">
+            <label id="position-header"
+                data-i18n="common:body.inspector.transformation.translation.header">Translation</label>
+            <label data-i18n="common:body.inspector.transformation.translation.x" id="rw-label" for="rw">X</label>
+            <input id="rw-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.translation.y" id="hw-label" for="hw">Y</label>
+            <input id="hw-inp" type="number" class="input-field">
+            <label data-i18n="common:body.inspector.transformation.translation.height" id="height-label"
+                for="height">Z</label>
+            <input id="height-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.snap" id="pos-snap-label">Snap</label>
+            <select id="pos-snap-inp" class="input-field">
+                <option value=50>50</option>
+                <option value=10>10</option>
+                <option value=1 selected="selected">1</option>
+                <option value=0.1>0.1</option>
+                <option value=0>0</option>
+            </select>
+            <ge-button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-translation'
+                shape="square" size="medium" src="./images/common/reset.svg"></ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.transformation.translation.header"
+                id='translation-widget' shape="square" size="medium" title="Translation"
+                src="./images/common/translate.svg"></ge-button>
+
+
+            <label id="rotation-header"
+                data-i18n="common:body.inspector.transformation.rotation.header">Rotation</label>
+
+            <label data-i18n="common:body.inspector.transformation.rotation.x" id="x-rot-label"
+                for="x-rot-inp">X</label>
+            <input id="x-rot-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.rotation.y" id="y-rot-label"
+                for="y-rot-inp">Y</label>
+            <input id="y-rot-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.rotation.z" id="z-rot-label"
+                for="z-rot-inp">Z</label>
+            <input id="z-rot-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.snap" id="rot-snap-label">Snap</label>
+            <select id="rot-snap-inp" class="input-field">
+                <option value=45>45</option>
+                <option value=10>10</option>
+                <option value=5 selected="selected">5</option>
+                <option value=1>1</option>
+                <option value=0>0</option>
+            </select>
+            <ge-button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-rotation' size="medium"
+                shape="square" src="./images/common/reset.svg" title="Zurücksetzen"></ge-button>
+
+            <label data-i18n="common:body.inspector.transformation.scale.header" id="scale-header">Scale</label>
+            <label data-i18n="common:body.inspector.transformation.scale.x" id="x-scale-label"
+                for="x-scale-inp">X</label>
+            <input id="x-scale-inp" type="number" class="input-field">
+            <label data-i18n="common:body.inspector.transformation.scale.y" id="y-scale-label"
+                for="y-scale-inp">Y</label>
+            <input id="y-scale-inp" type="number" class="input-field">
+            <label data-i18n="common:body.inspector.transformation.scale.z" id="z-scale-label"
+                for="z-scale-inp">Z</label>
+            <input id="z-scale-inp" type="number" class="input-field">
+
+            <label data-i18n="common:body.inspector.transformation.snap" id="scale-snap-label">Snap</label>
+            <select id="scale-snap-inp" class="input-field">
+                <option value=100>100</option>
+                <option value=10>10</option>
+                <option value=1 selected="selected">1</option>
+                <option value=0.1>0.1</option>
+                <option value=0>0</option>
+            </select>
+            <ge-button data-i18n="[title]common:body.inspector.transformation.reset" id='reset-scale' shape="square"
+                size="medium" src="./images/common/reset.svg"></ge-button>
+
+            <div id="ground-clamp">
+                <input type="checkbox" id="ground-clamp-cb" checked>
+                <label data-i18n="common:body.inspector.transformation.clamp-ground" id="ground-clamp-label"
+                    for="ground-clamp-cb">clamp to ground</label>
+            </div>
+            <div id="apply-div">
+                <ge-button data-i18n="common:body.inspector.transformation.apply-settings" id="apply-btn"
+                    shape="rectangle" size="long">Apply</ge-button>
+            </div>
+            <div id="uni-scale">
+                <input type="checkbox" id="uni-scale-cb" checked>
+                <label data-i18n="common:body.inspector.transformation.uniform-scale" id="uni-scale-label"
+                    for="uni-scale-cb">uniform scale</label>
+            </div>
+
+            <ge-button data-i18n="[title]common:body.inspector.transformation.rotation.header" id='rotation-widget'
+                shape="square" size="medium" title="Rotation" src="./images/common/rotate.svg"></ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.transformation.scale.header" id='scale-widget'
+                shape="square" size="medium" title="Skalierung" src="./images/common/scale.svg"></ge-button>
+        </div>
+    </div>
+    <div class="widget-l3">
+        <div data-i18n="common:body.inspector.control.header">Control</div>
+        <div id="control-widget">
+
+            <ge-button data-i18n="[title]common:body.inspector.control.north.title" id="north-widget" shape="square"
+                size="small" src="./images/common/north.svg"></ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.south.title" id='south-widget' shape="square"
+                size="small" src='./images/common/south.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.west.title" id='west-widget' shape="square"
+                size="small" src='./images/common/west.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.east.title" id='east-widget' shape="square"
+                size="small" src='./images/common/east.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.up.title" id='up-widget' shape="square"
+                size="small" src='./images/common/north.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.down.title" id='down-widget' shape="square"
+                size="small" src='./images/common/south.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.clock.title" id='clock-widget' shape="square"
+                size="small" src='./images/common/clockwise.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.clock.title" id='counter-widget' shape="square"
+                size="small" src='./images/common/counterclockwise.svg'>
+            </ge-button>
+            <ge-button data-i18n="[title]common:body.inspector.control.clamp-ground" id='drop-widget' shape="square"
+                size="small" src='./images/common/down.svg'>
+            </ge-button>
+
+        </div>
+    </div>
+</div>

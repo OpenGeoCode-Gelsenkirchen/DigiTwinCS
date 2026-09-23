@@ -1,0 +1,6 @@
+{
+    "warning": {
+        "title": "Warnung: Daten von mehreren Messstationen können nicht abgerufen werden",
+        "message": "Für {{current}} von {{total}} Messstationen stehen seit mehr als {{minutes}} Minuten keine oder nicht alle Daten zur Verfügung."
+    }
+}

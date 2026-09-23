@@ -1,0 +1,32 @@
+:host {
+    container-name: wrapper;
+}
+
+:host div {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    height: max-content;
+    /*width: auto;*/
+    gap: 0.4em;
+}
+
+:host([direction='row']) div {
+    flex-direction: row;
+}
+
+:host([direction='column']) div {
+    flex-direction: column;
+}
+
+@media (max-width: 500px) {
+    :host div {
+        flex-wrap: wrap;
+        width: 60vw;
+        align-items: end;
+        justify-content: end;
+    }
+}

@@ -1,0 +1,297 @@
+{
+    "header": {
+        "meta": {
+            "description": "Example Description",
+            "author": "Autor"
+        },
+        "title": {
+            "html": "Example Title",
+            "text": "An example text"
+        }
+    },
+    "body": {
+        "table": {
+            "hidden": {
+                "reset": "Reset deletion list"
+            }
+        },
+        "cesium-credit": {
+            "text": "Data Sources",
+            "lightbox-title": "Data provided by:"
+        },
+        "ge-footer": {
+            "coordinate-system": "(ETRS89 / UTM Zone 32N)"
+        },
+        "address": {
+            "menu": "Open menu",
+            "search": "enter address to search..."
+        },
+        "compass": "Align to north",
+        "baseLayerPicker": {
+            "header": "Background, Terrain and Style",
+            "background": "Background",
+            "terrain": "Terrain",
+            "style": "Style"
+        },
+        "footer": {
+            "data-privacy": {
+                "title": "Privacy Policy of Example",
+                "text": "Privacy Policy"
+            },
+            "imprint": {
+                "title": "Imprint of the Example",
+                "text": "Imprint"
+            }
+        },
+        "layer-overview": {
+            "title": "Model Content",
+            "3d-header": "3D Layers",
+            "mesh-header": "Mesh",
+            "2d-header": "2D Layers",
+            "hidden-header": "hidden 3D models",
+            "hide": {
+                "export": "Export deletion list",
+                "import": "Import deletion list"
+            }
+        },
+        "inspector": {
+            "actions": {
+                "header": "Actions",
+                "delete": {
+                    "title": "Delete selected model"
+                }
+            },
+            "transformation": {
+                "header": "Transformation",
+                "translation": {
+                    "header": "Translation",
+                    "x": "Easting",
+                    "y": "Northing",
+                    "height": "Height"
+                },
+                "rotation": {
+                    "header": "Rotation",
+                    "x": "X",
+                    "y": "Y",
+                    "z": "Z"
+                },
+                "scale": {
+                    "header": "Scaling",
+                    "x": "X",
+                    "y": "Y",
+                    "z": "Z"
+                },
+                "snap": "Snap",
+                "reset": "Reset",
+                "clamp-ground": "always bind to ground",
+                "apply-settings": "Apply settings",
+                "uniform-scale": "uniform scaling"
+            },
+            "control": {
+                "header": "Control",
+                "north": {
+                    "title": "Move north",
+                    "text": "N"
+                },
+                "east": {
+                    "title": "Move east",
+                    "text": "E"
+                },
+                "south": {
+                    "title": "Move south",
+                    "text": "S"
+                },
+                "west": {
+                    "title": "Move west",
+                    "text": "W"
+                },
+                "up": "Move up",
+                "down": "Move down",
+                "cw": "Rotate clockwise",
+                "ccw": "Rotate counterclockwise",
+                "clamp-ground": "Place on terrain"
+            }
+        },
+        "overview-map": "Overview map",
+        "theme-map": "Switch theme map",
+        "settings": {
+            "title": "Settings",
+            "opacity": "Ground transparency",
+            "graphics-profile": "Quality profile",
+            "profile": {
+                "low": "Low",
+                "medium": "Medium",
+                "high": "High",
+                "ultra": "Ultra"
+            }
+        },
+        "tools": {
+            "title": "Tools",
+            "shadow": "Shadow",
+            "excavation": {
+                "header": "Excavation",
+                "import": {
+                    "text": "Import excavation",
+                    "title": "Import excavations in GeoJSON format"
+                },
+                "export": {
+                    "text": "Export excavation",
+                    "title": "Export excavations as GeoJSON"
+                },
+                "delete": "Delete excavations"
+            },
+            "measure": {
+                "header": "Measurement Tools",
+                "polygon": "Sloped area",
+                "polyline": "Sloped distance",
+                "height": "Height difference and horizontal distance",
+                "building": {
+                    "length": "Show building lengths",
+                    "area": "Show building areas"
+                },
+                "delete": "Delete measurements",
+                "export": {
+                    "local": "Export in local coordinate system",
+                    "export": "Export measurements as DXF (EPSG: 25832)"
+                }
+            },
+            "analysis": {
+                "header": "Analysis",
+                "water": {
+                    "header": "Water level",
+                    "toggle": "Turn water level on/off",
+                    "click": "Set water level with mouse click",
+                    "slider": "Water level in m:",
+                    "suffix": "m"
+                },
+                "visibility": {
+                    "header": "Visibility analysis",
+                    "toggle": "Turn visibility analysis on/off",
+                    "input": "rel. height",
+                    "distance": "max. distance",
+                    "suffix": "m"
+                }
+            },
+            "print": {
+                "header": "Print",
+                "export": {
+                    "pdf": "export as PDF",
+                    "png": "export as PNG"
+                },
+                "pdf": {
+                    "file-prefix": "3D_",
+                    "title": "Example PDF Title",
+                    "contact": "Contact:",
+                    "contact-content": "ExampleContact\nStreet\nPostalCode\nGemeinde",
+                    "internal-license": "For internal service use only",
+                    "license": "Data License Germany - Zero - Version 2.0"
+                },
+                "png": {
+                    "file-prefix": "3D_"
+                }
+            },
+            "share": {
+                "header": "Share view",
+                "description": "Create a link to your current view that you can share with other people.",
+                "button": "Copy link"
+            }
+        },
+        "wms": {
+            "header": "Add theme"
+        },
+        "toolbar": {
+            "toggle": "Open/close toolbar",
+            "home": "Jump to home position",
+            "gps": "Jump to current device position",
+            "pedestrian": "Turn pedestrian mode on/off",
+            "opacity": "Turn ground transparency on/off (70%)",
+            "texture": "Turn textures on/off",
+            "mesh": "Turn mesh on/off",
+            "map": "Turn overview map on/off",
+            "share": "Copy link",
+            "zoom": {
+                "pos": "Zoom in",
+                "neg": "Zoom out"
+            }
+        },
+        "sidebar": {
+            "header": "Model menu:",
+            "layers": "Model content",
+            "add-content": {
+                "header": "Add content",
+                "insert-default": "Insert standard cube (1m edge length)",
+                "insert-gltf": "Load 3D models (GLTF/GLB)",
+                "insert-wms": "Add theme (WMS)",
+                "insert-geojson": "Load GeoJSON (WGS84)",
+                "insert-geotiff": "Load raster maps (GEOTIFF)"
+            },
+            "tools": "Tools",
+            "theme-map": "Switch theme map",
+            "settings": "Settings",
+            "help": {
+                "header": "Help",
+                "manual": "Manual",
+                "information": "Information",
+                "contact": "Contact/Error report"
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "text": "<p>Example Text Contact</p>"
+        },
+        "information": {
+            "title": "Information",
+            "text": "<p>Example Text Information</p>"
+        },
+        "pedestrian": {
+            "title": "Pedestrian mode activated",
+            "subtitle": "Press 'ESC' key to exit",
+            "content": "'W', 'A', 'S', 'D' keys or arrow keys for movement\n'Spacebar' to sprint\n'Left mouse button' hold to look around"
+        },
+        "excavation": {
+            "edit": {
+                "title": "Set excavation",
+                "content": "Left click: Set corner point \nRight click: Complete excavation"
+            },
+            "error": {
+                "title": "Error: Excavation creation not possible",
+                "content": "Excavations are not possible for the ellipsoid. Please activate a DEM"
+            }
+        },
+        "basic-measurement": {
+            "title": "Measurement mode activated",
+            "content": "Left click: Set measurement point\nRight click: Complete measurement"
+        },
+        "height-measurement": {
+            "title": "Height measurement activated",
+            "content": "1. Left click: Start measurement\n2. Left click: Complete measurement"
+        },
+        "building-area-measurement": {
+            "title": "Building area measurement",
+            "content": "Left click: Load area measurement for a building."
+        },
+        "building-length-measurement": {
+            "title": "Building length measurements",
+            "content": "Left click: Load length measurements for a building."
+        },
+        "viewshed": {
+            "title": "Visibility analysis activated",
+            "content": "1. Left click: Set viewpoint.\n2. Left click: Set focus point.\nThe set points can then be selected and moved."
+        },
+        "share-view": {
+            "title": "Link copied!",
+            "content": "The link has been successfully copied to the clipboard."
+        }
+    },
+    "upload": {
+        "gltf": {
+            "title": "3D-Model Upload",
+            "text": "Please select a gltf/glb model",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+        }
+    },
+    "Straße": "Street",
+    "Adresse": "Address",
+    "Ort": "POI"
+}

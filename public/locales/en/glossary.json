@@ -1,0 +1,16 @@
+{
+    "building_one": "Building",
+    "building_other": "Buildings",
+    "bridge_one": "Bridge",
+    "bridge_other": "Bridges",
+    "noise-barrier_one": "Noise Barrier",
+    "noise-barrier_other": "Noise Barriers",
+    "vegetation": "Vegetation",
+    "overhead-lines": "Overhead Lines",
+    "city-inventory": "City Inventory",
+    "sewer-network": "Sewer Network",
+    "planned-building": "Planned Buildings",
+    "continue": "Continue",
+    "back": "Back",
+    "add": "Add"
+}

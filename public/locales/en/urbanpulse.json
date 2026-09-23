@@ -1,0 +1,6 @@
+{
+    "warning": {
+        "title": "Warning: Data unavailable from multiple sensor stations",
+        "message": "Data from {{current}} of {{total}} sensor stations has been partially or completely unavailable for more than {{minutes}} minutes."
+    }
+}

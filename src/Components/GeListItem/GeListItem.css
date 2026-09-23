@@ -1,0 +1,76 @@
+.list-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: var(--color-primary);
+    padding: 0.25rem;
+
+    /*max-width: 20vw;*/
+
+    min-height: 0.75rem;
+    max-height: 2rem;
+
+    border: 1px solid black;
+    border-top: none;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-highlight);
+}
+
+:host([with-input]) .list-item {
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+}
+
+.list-item:has(.delete-button:hover) {
+    background-color: unset;
+}
+
+.list-item > div {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 2rem;
+    max-height: 2rem;
+}
+
+.icon-container > img {
+    width: 80%;
+    height: 80%;
+}
+
+.span-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#span {
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox {
+    cursor: pointer;
+}
+
+ge-list-item:not(:defined) > template[shadowroot] ~ * {
+    display: none;
+}

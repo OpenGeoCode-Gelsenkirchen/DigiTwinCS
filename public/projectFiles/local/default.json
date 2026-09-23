@@ -1,0 +1,225 @@
+{
+    "globalConfig": "./projectFiles/global/global.json",
+    "manual": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Anleitung_3DStadtmodell_GE_v1_21e.pdf",
+    "terrain": {
+        "layers:terrain.2025.name": {
+            "show": true,
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Gelaende/DGM_2025_full_05m",
+            "iconUrl": "./images/ge/baselayer_dgm05.png",
+            "tooltip": "layers:terrain.2025.tooltip",
+            "requestVertexNormals": true,
+            "requestWaterMask": false,
+            "requestMetadata": false,
+            "credit": "layers:terrain.2025.credit",
+            "creation": "CesiumTerrainProvider"
+        }
+    },
+    "threeD": {
+        "layers:threeD.buildings.name": {
+            "showLoadingWindow": false,
+            "url": [
+                "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Pfade_Plexmap.txt",
+                "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/PfadeNW_LOD2.txt"
+            ],
+            "target": "buildings",
+            "tags": ["stylable"],
+            "show": true,
+            "table": true,
+            "backFaceCulling": true,
+            "type": "b3dm",
+            "credit": "3D-Gebäude: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/f6ba8bae-f62e-42f8-babe-c7dafad56d17'>Stadt Gelsenkirchen</a>",
+            "uuidAttribute": "ID",
+            "format": {
+                "title": "layers:threeD.buildings.name",
+                "attributes": [
+                    {"key": "ID"},
+                    {
+                        "key": "name",
+                        "label": "Name"
+                    },
+                    {
+                        "key": "GFK",
+                        "label": "layers:threeD.buildings.format.gfk"
+                    },
+                    {
+                        "key": "Hoehe",
+                        "label": "layers:threeD.buildings.format.height"
+                    },
+                    {
+                        "key": "DatenquelleDachhoehe",
+                        "label": "layers:threeD.buildings.format.ds_roof_height"
+                    },
+                    {
+                        "key": "Strasse",
+                        "label": "layers:threeD.buildings.format.street"
+                    },
+                    {
+                        "key": "Hsnr",
+                        "label": "layers:threeD.buildings.format.house_number"
+                    },
+                    {
+                        "key": "PLZ",
+                        "label": "layers:threeD.buildings.format.zip"
+                    },
+                    {
+                        "key": "Stadt",
+                        "label": "layers:threeD.buildings.format.municipality"
+                    }
+                ]
+            }
+        },
+        "layers:threeD.bridges.name": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Pfade_Bruecken.txt",
+            "target": "bruecken",
+            "tags": ["stylable"],
+            "show": true,
+            "table": true,
+            "backFaceCulling": true,
+            "type": "b3dm",
+            "format": {
+                "title": "layers:threeD.bridges.name",
+                "attributes": [{"key": "UUID"}, {"key": "Name"}]
+            }
+        },
+        "Tunnel": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Tunnel/tileset.json",
+            "target": "tunnel",
+            "tags": ["stylable"],
+            "show": true,
+            "table": true,
+            "backFaceCulling": true,
+            "type": "b3dm",
+            "format": {
+                "title": "Tunnel",
+                "attributes": [{"key": "UUID"}, {"key": "NAM"}]
+            }
+        },
+        "layers:threeD.noise-barrier.name": {
+            "target": "laermschutz",
+            "table": true,
+            "show": true,
+            "type": "b3dm",
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/laermschutz/tileset.json",
+            "tags": ["stylable"],
+            "format": {
+                "title": "layers:threeD.noise-barrier.name",
+                "attributes": [{"key": "UUID"}]
+            }
+        },
+        "layers:threeD.vegetation.name": {
+            "url": [
+                "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Pfade_Vegetation.txt",
+                "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Vegetation_Bochum/tileset.json"
+            ],
+            "target": "gltf",
+            "show": true,
+            "table": true,
+            "backFaceCulling": true,
+            "type": "b3dm",
+            "tags": ["vegetation"],
+            "format": {
+                "title": "layers:threeD.vegetation.name",
+                "attributes": [
+                    {"key": "UUID"},
+                    {
+                        "key": "Baumart",
+                        "label": "layers:threeD.vegetation.format.species"
+                    },
+                    {
+                        "key": "Pflanzjahr",
+                        "label": "layers:threeD.vegetation.format.year"
+                    },
+                    {
+                        "key": "Höhe",
+                        "label": "layers:threeD.vegetation.format.height"
+                    },
+                    {
+                        "key": "Durchmesser",
+                        "label": "layers:threeD.vegetation.format.diameter"
+                    }
+                ]
+            }
+        },
+        "layers:threeD.overhead-circuit.name": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Pfade_Freileitungen.txt",
+            "target": "freileitungen",
+            "tags": ["Freileitungen"],
+            "show": false,
+            "table": true,
+            "backFaceCulling": false,
+            "type": "points"
+        },
+        "layers:threeD.city-inventory.name": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Pfad_Stadtinventar.txt",
+            "target": "stadtinventar",
+            "tags": ["stylable"],
+            "show": true,
+            "table": true,
+            "backFaceCulling": true,
+            "type": "b3dm",
+            "format": false
+        },
+        "layers:threeD.planned-buildings.name": {
+            "url": "https://gdi.gelsenkirchen.de/wss/service/WFSGebaeude/guest?service=wfs&request=GetFeature&typeNames=GB_Geobasis_Gebaeude:Gebaeudeumringe__geplant_&outputFormat=GeoJSON",
+            "target": "planungsgebaeude",
+            "show": true,
+            "table": true,
+            "clampToGround": true,
+            "color": "rgba(240, 160, 160, 0.65)",
+            "extrusionAttribute": {
+                "extrusionHeight": "FH-EFH"
+            },
+            "uuidAttribute": "AZ",
+            "outline": false,
+            "entityName": "layers:threeD.planned-buildings.format.title",
+            "tableAttributes": {
+                "layers:threeD.planned-buildings.format.attributes.reference": "AZ",
+                "layers:threeD.planned-buildings.format.attributes.address": [
+                    "STN",
+                    "HNR",
+                    "ADZ"
+                ],
+                "layers:threeD.planned-buildings.format.attributes.floors": "GESCHOSSE",
+                "layers:threeD.planned-buildings.format.attributes.height": "extrusionHeight"
+            },
+            "type": "3Dgeojson"
+        }
+    },
+    "mesh": {
+        "layers:mesh.name": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/meshes.txt",
+            "target": "mesh",
+            "id": "mesh_rvr",
+            "show": false,
+            "credit": "RVR Mesh 2025></a>"
+        }
+    },
+    "twoD": {
+        "layers:twoD.city-boundary.name": {
+            "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/stadtgebiet.geojson",
+            "target": "stadtgebiet_default",
+            "show": true,
+            "table": true,
+            "color": "rgba(0,0,140,0.7)",
+            "clampToGround": true,
+            "credit": "layers:twoD.city-boundary.credit"
+        },
+        "layers:twoD.districts.name": "./projectFiles/partials/districts.json"
+    },
+    "links": [
+        {
+            "imgUrl": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/TN_Punktwolkenviewer.png",
+            "title": "links:pointcloud.title",
+            "description": "links:pointcloud.description",
+            "linkUrl": "https://geo.gelsenkirchen.de/punktwolkenviewer/index.html?annoload=1&RWTarget=366043.848&HWTarget=5713196.781&HTarget=76.9"
+        },
+        {
+            "imgUrl": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/TN_Stadtplan.png",
+            "title": "Stadtplan Gelsenkirchen",
+            "linkUrl": "https://gdi.gelsenkirchen.de/mapapps/resources/apps/gb_970_pub_4/index.html?lang=de&title=Stadtplan&bm=background2&l=stadtplan_ge"
+        }
+    ],
+    "waterArea": [
+        "https://geodata.gelsenkirchen.de/3dmodelle/Wasser_Mischberechnung.geojson"
+    ]
+}

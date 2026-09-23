@@ -1,0 +1,38 @@
+:host {
+    font-family: var(--font-family-primary);
+    color: var(--text-color-primary);
+}
+
+.wrapper {
+    display: grid;
+    justify-content: space-evenly;
+    background-color: var(--color-tertiary);
+    padding: 1rem 0 1rem 0;
+}
+
+.date-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+input[type='date'] {
+    font-family: var(--font-family-primary);
+}

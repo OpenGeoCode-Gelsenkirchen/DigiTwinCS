@@ -1,0 +1,80 @@
+{
+    "layers:threeD.buildings.name": {
+        "url": [
+            "https://example.com/LOD2.txt",
+            "https://example.com/LOD3.txt",
+            "https://example.com/LOD4.txt",
+            "https://example.com/anotherTileset/tileset.json"
+        ],
+        "target": "buildings",
+        "tags": ["stylable"],
+        "show": true,
+        "table": true,
+        "uuidAttribute": "gml_id",
+        "backFaceCulling": true,
+        "type": "b3dm",
+        "credit": "Buildings: <a style='color: deepskyblue; text-decoration: underline;' href='https://example.com/landingPage'>Example</a>",
+        "format": {
+            "title": "layers:threeD.buildings.name",
+            "attributes": [
+                {"key": "UUID"},
+                {
+                    "key": "EX",
+                    "label": "layers:threeD.buildings.format.ex"
+                }
+            ]
+        }
+    },
+    "layers:threeD.vegetation.name": {
+        "url": "https://example.com/Vegetation.txt",
+        "target": "gltf",
+        "show": true,
+        "table": true,
+        "backFaceCulling": true,
+        "type": "b3dm",
+        "tags": ["vegetation"],
+        "format": {
+            "title": "layers:threeD.vegetation.name",
+            "attributes": [
+                {"key": "UUID"},
+                {
+                    "key": "Species",
+                    "label": "layers:threeD.vegetation.format.species"
+                }
+            ]
+        }
+    },
+    "layers:threeD.overhead-circuit.name": {
+        "url": "https://example.com/points/tileset.json",
+        "target": "pointcloud",
+        "tags": ["pointcloud"],
+        "show": false,
+        "table": true,
+        "type": "points"
+    },
+    "layers:threeD.planned-buildings.format.name": {
+        "url": "https://example.com/plannedBuildings/example.geojson",
+        "target": "plannedBuildings",
+        "show": true,
+        "table": true,
+        "clampToGround": true,
+        "color": "rgba(240, 160, 160, 0.65)",
+        "extrusionAttribute": {
+            "extrusionHeight": "FH-EFH"
+        },
+        "uuidAttribute": "AZ",
+        "outline": false,
+        "entityName": "layers:threeD.planned-buildings.format.title",
+        "tableAttributes": {
+            "layers:threeD.planned-buildings.format.attributes.reference": "AZ",
+            "layers:threeD.planned-buildings.format.attributes.address": [
+                "STN",
+                "HNR",
+                "ADZ"
+            ],
+            "layers:threeD.planned-buildings.format.attributes.floors": "FLOORS",
+            "layers:threeD.planned-buildings.format.attributes.height": "extrusionHeight"
+        },
+        "type": "3Dgeojson"
+    }
+}

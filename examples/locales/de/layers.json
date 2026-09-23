@@ -1,0 +1,66 @@
+{
+    "terrain": {
+        "2024": {
+            "name": "DGM 2024",
+            "tooltip": "Digitales Geländemodell (Aufl. 0,5m | Stand: 2024)",
+            "credit": "<a>Beispiel Credit</a>"
+        }
+    },
+    "threeD": {
+        "buildings": {
+            "name": "Gebäude",
+            "format": {
+                "gfk": "GFK",
+                "height": "Höhe",
+                "street": "Straße",
+                "house_number": "Hausnummer",
+                "municipality": "Gemeinde",
+                "zip": "PLZ"
+            }
+        },
+        "bridges": {
+            "name": "Brücken"
+        },
+        "noise-barrier": {
+            "name": "Lärmschutzwand"
+        },
+        "vegetation": {
+            "name": "Vegetation",
+            "format": {
+                "attributes": {
+                    "species": "Baumart",
+                    "year": "Pflanzjahr",
+                    "height": "Höhe",
+                    "diameter": "Durchmesser"
+                }
+            }
+        },
+        "overhead-circuit": {
+            "name": "Freileitungen"
+        },
+        "city-inventory": {
+            "name": "Stadtinventar"
+        },
+        "planned-buildings": {
+            "name": "Geplant Gebäude",
+            "format": {
+                "title": "Gebäudemodell (geplant)",
+                "attributes": {
+                    "reference": "Aktenzeichen",
+                    "address": "Adresse",
+                    "floors": "Geschosse",
+                    "height": "Höhe"
+                }
+            }
+        }
+    },
+    "mesh": {
+        "name": "Mesh 2022"
+    },
+    "twoD": {
+        "city-boundary": {
+            "name": "Beispiel Grenze",
+            "credit": "<a>Beispiel Credit</a>"
+        }
+    }
+}

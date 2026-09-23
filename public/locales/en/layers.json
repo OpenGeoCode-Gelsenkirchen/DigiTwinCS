@@ -1,0 +1,85 @@
+{
+    "baseLayer": {
+        "webmap": {
+            "name": "Webmap (Colored)",
+            "tooltip": "Weboptimized map of Gelsenkirchen (colored)"
+        },
+        "topplusopen": {
+            "tooltip": "Composite map of the world"
+        }
+    },
+    "terrain": {
+        "2024": {
+            "name": "DTM 2024",
+            "tooltip": "Digital terrain model (Resolution 0.5m | Status: 2024)",
+            "credit": "Terrain 2024: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/f6ba8bae-f62e-42f8-babe-c7dafad56d17'>City of Gelsenkirchen</a>"
+        },
+        "2025": {
+            "name": "DTM 2025",
+            "tooltip": "Digital terrain model (Resolution 0.5m | Status: 2025)",
+            "credit": "Terrain 2025: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/f6ba8bae-f62e-42f8-babe-c7dafad56d17'>City of Gelsenkirchen</a>"
+        }
+    },
+    "threeD": {
+        "buildings": {
+            "name": "Buildings",
+            "format": {
+                "gfk": "GFC",
+                "height": "Height",
+                "street": "Street",
+                "house_number": "House number",
+                "municipality": "Municipality",
+                "zip": "ZIP code",
+                "ds_roof_height": "Datasource Roof Height"
+            }
+        },
+        "christmas-tree": {
+            "name": "Christmas Tree"
+        },
+        "bridges": {
+            "name": "Bridges"
+        },
+        "noise-barrier": {
+            "name": "Noise barrier"
+        },
+        "vegetation": {
+            "name": "Vegetation",
+            "format": {
+                "species": "Tree species",
+                "year": "Year planted",
+                "height": "Height",
+                "diameter": "Diameter"
+            }
+        },
+        "overhead-circuit": {
+            "name": "Overhead lines"
+        },
+        "city-inventory": {
+            "name": "City inventory"
+        },
+        "planned-buildings": {
+            "name": "Planned buildings",
+            "format": {
+                "title": "Building model (planned)",
+                "attributes": {
+                    "reference": "Reference number",
+                    "address": "Address",
+                    "floors": "Floors",
+                    "height": "Height"
+                }
+            }
+        }
+    },
+    "mesh": {
+        "name": "RVR Mesh 2025"
+    },
+    "twoD": {
+        "city-boundary": {
+            "name": "City boundary",
+            "credit": "City boundary: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/91ee94de-9803-4ea0-a0a6-91c91b1a661a'>City of Gelsenkirchen</a>"
+        },
+        "districts": {
+            "name": "Districts (Labels)"
+        }
+    }
+}

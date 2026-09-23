@@ -1,0 +1,9 @@
+.ge-list {
+    background-color: var(--color-primary);
+    /*min-height: 2rem; */
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid black;
+}

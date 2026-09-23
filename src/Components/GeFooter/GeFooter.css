@@ -1,0 +1,28 @@
+:host {
+    color: var(--text-color-primary);
+    background-color: var(--color-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-primary);
+
+    container-name: wrapper;
+    container-type: inline-size;
+}
+
+.footer-bar {
+    max-height: 3rem;
+    font-size: 0.8rem;
+    height: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+@container wrapper (max-width: 600px) {
+    .footer-bar {
+        flex-direction: column-reverse;
+        height: 5rem;
+    }
+}

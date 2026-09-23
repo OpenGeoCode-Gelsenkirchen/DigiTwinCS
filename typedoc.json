@@ -1,0 +1,7 @@
+{
+    "entryPoints": ["./src/**/*.ts", "./src/**/*.js"],
+    "entryPointStrategy": "expand",
+    "name": "3D-City Model",
+    "projectDocuments": ["documents/en/*.md"],
+    "hostedBaseUrl": "http://localhost/documents"
+}

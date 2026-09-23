@@ -1,0 +1,10 @@
+{
+    "file": {
+        "title": "Faulty Input File",
+        "text": "The input file appears to be faulty. Please check the correctness of the file."
+    },
+    "reprojection": {
+        "title": "Warning: Internal Reprojection",
+        "text": "The input is not in WGS84, which requires reprojection. This reprojection may be error-prone and should be checked."
+    }
+}

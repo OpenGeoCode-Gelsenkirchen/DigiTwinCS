@@ -1,0 +1,101 @@
+h1 {
+    font-size: 1rem;
+}
+
+img {
+    height: 100%;
+}
+
+:host {
+    display: block;
+    width: 250px;
+    /*height: 350px;*/
+    height: auto;
+    background-color: #000000bb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+#close {
+    height: 1rem;
+    width: 1rem;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+#header-div {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    margin-bottom: 2.25rem;
+    justify-content: space-between;
+}
+
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    /*row-gap: 1rem;*/
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-element {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.status-bar {
+    position: absolute;
+    width: 0.5rem;
+    left: -1rem;
+}
+
+.status-bar[status='online'] {
+    background-color: #2ecc71;
+}
+
+.status-bar[status='partial'] {
+    background-color: #f0be00ff;
+}
+
+.status-bar[status='offline'] {
+    background-color: #e74c3cff;
+}
+
+.helix-wrapper {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+    display: flex;
+}
+
+.wind-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+}
+
+.group-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+
+#helix-status-bar {
+    border-radius: 4px 0 0 0;
+    top: -1rem;
+    bottom: 0;
+}
+
+#wind-status-bar {
+    border-radius: 0 0 0 4px;
+    top: 0;
+    bottom: -1rem;
+}
+
+#wind-right {
+    width: 100%;
+}

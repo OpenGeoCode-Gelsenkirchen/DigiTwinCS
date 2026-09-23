@@ -1,0 +1,96 @@
+:host {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--text-color-primary);
+    position: relative;
+}
+
+#content {
+    background-color: var(--color-primary);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    max-width: 26rem;
+    max-height: fit-content;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.elementGroup {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.elementDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    max-width: 6rem;
+}
+
+.elementTitle {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 6rem;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#items {
+    /*transform: translateX(-77%);*/
+    position: absolute;
+    top: 6.2em;
+    min-width: 350px;
+}
+
+#wrapper > #items {
+    transition: opacity 0.25s linear;
+    opacity: 1;
+}
+
+:host([collapsed]) > #wrapper > #items {
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#content {
+    container-name: wrapper;
+}
+
+@media (max-height: 700px) {
+    #content {
+        max-height: 400px;
+
+        overflow-y: auto;
+    }
+}
+
+@media (max-height: 700px) and (orientation: portrait) {
+    #content {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-height: 550px) and (orientation: landscape) {
+    #content {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+}

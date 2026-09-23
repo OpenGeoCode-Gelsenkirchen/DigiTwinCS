@@ -1,0 +1,10 @@
+{
+    "pointcloud": {
+        "title": "Pointcloud Viewer",
+        "description": "3D pointcloud viewer of Gelsenkirchen"
+    },
+    "citymap": {
+        "title": "City Map Gelsenkirchen",
+        "description": "City map of Gelsenkirchen"
+    }
+}

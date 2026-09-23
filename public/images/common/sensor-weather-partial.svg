@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="800"
+   height="800"
+   viewBox="0 0 32 32"
+   id="Layer_1"
+   data-name="Layer 1"
+   version="1.1"
+   sodipodi:docname="sensor-weather-online.svg"
+   inkscape:export-filename="sensor-weather-partial.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview140"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <defs
+     id="defs134">
+    <style
+       id="style132">
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path
+     d="M 30,3.4146 28.5854,2 17.2932,13.2925 a 1,1 0 1 0 1.4141,1.414 l 3.4543,-3.4541 A 4.9646,4.9646 0 0 1 18.2805,18.9717 7.0485,7.0485 0 0 0 13.1367,15.0986 4.9431,4.9431 0 0 1 18,9 V 7 a 6.9551,6.9551 0 0 0 -6.9087,8.0791 6.93,6.93 0 0 0 -2.8525,1.06 A 9.97,9.97 0 0 1 18,4 V 2 A 11.9756,11.9756 0 0 0 6.573,17.6357 6.9293,6.9293 0 0 0 5.2056,20.3418 4.9948,4.9948 0 0 0 7,30 H 17 A 4.9921,4.9921 0 0 0 21.9678,25.32 12.0391,12.0391 0 0 0 30,14 11.8678,11.8678 0 0 0 27.1611,6.2534 Z M 17,28 H 7 A 2.9945,2.9945 0 0 1 6.3037,22.0918 l 0.6587,-0.1572 0.0986,-0.67 a 4.9923,4.9923 0 0 1 9.878,0 l 0.0986,0.6695 0.6587,0.1572 A 2.9945,2.9945 0 0 1 17,28 Z M 28,14 a 10.0346,10.0346 0 0 1 -6.3118,9.291 4.9577,4.9577 0 0 0 -2.0207,-2.5 6.9922,6.9922 0 0 0 3.938,-10.9824 l 2.132,-2.1318 A 9.8873,9.8873 0 0 1 28,14 Z"
+     id="path136"
+     style="fill:#f0be00;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <rect
+     id="_Transparent_Rectangle_"
+     data-name="&lt;Transparent Rectangle&gt;"
+     class="cls-1"
+     width="32"
+     height="32"
+     x="0"
+     y="0" />
+</svg>

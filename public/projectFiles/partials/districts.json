@@ -1,0 +1,27 @@
+{
+    "url": "https://gdi.gelsenkirchen.de/wss/service/WFSVerwaltungsgrenzen/guest?service=wfs&request=GetFeature&typeNames=Verwaltungsgrenzen:Stadtteil_Beschriftung&outputFormat=GeoJSON",
+    "clampToGround": true,
+    "type": "label",
+    "table": true,
+    "show": true,
+    "labelConfiguration": {
+        "labelText": "stadtteil_name",
+        "scaleByDistance": {
+            "near": 5000,
+            "nearValue": 1.0,
+            "far": 25000,
+            "farValue": 0.5
+        },
+        "distanceDisplayCondition": {
+            "near": 1500,
+            "far": 25000
+        },
+        "pixelOffset": [0, -70],
+        "anchorLineEnabled": false,
+        "fillColor": "#FFFFFF",
+        "style": "FILL_AND_OUTLINE",
+        "outlineWidth": 2,
+        "outlineColor": "#000000",
+        "disableDepthTestDistance": "0"
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "baseLayer": {
+        "webmap": {
+            "name": "Webkarte (farbig)",
+            "tooltip": "Weboptimierte Karte von Gelsenkirchen (farbig)"
+        },
+        "topplusopen": {
+            "tooltip": "Kombinierte Karte der ganzen Welt"
+        }
+    },
+    "terrain": {
+        "2024": {
+            "name": "DGM 2024",
+            "tooltip": "Digitales Geländemodell (Aufl. 0,5m | Stand: 2024)",
+            "credit": "Gelände 2024: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/f6ba8bae-f62e-42f8-babe-c7dafad56d17'>Stadt Gelsenkirchen</a>"
+        },
+        "2025": {
+            "name": "DGM 2025",
+            "tooltip": "Digitales Geländemodell (Aufl. 0,5m | Stand: 2025)",
+            "credit": "Gelände 2025: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/f6ba8bae-f62e-42f8-babe-c7dafad56d17'>Stadt Gelsenkirchen</a>"
+        }
+    },
+    "threeD": {
+        "buildings": {
+            "name": "Gebäude",
+            "format": {
+                "gfk": "GFK",
+                "height": "Höhe",
+                "street": "Straße",
+                "house_number": "Hausnummer",
+                "municipality": "Gemeinde",
+                "zip": "PLZ",
+                "ds_roof_height": "Datenquelle Dachhöhe"
+            }
+        },
+        "christmas-tree": {
+            "name": "Weihnachtsbaum"
+        },
+        "bridges": {
+            "name": "Brücken"
+        },
+        "noise-barrier": {
+            "name": "Lärmschutzwand"
+        },
+        "vegetation": {
+            "name": "Vegetation",
+            "format": {
+                "attributes": {
+                    "species": "Baumart",
+                    "year": "Pflanzjahr",
+                    "height": "Höhe",
+                    "diameter": "Durchmesser"
+                }
+            }
+        },
+        "overhead-circuit": {
+            "name": "Freileitungen"
+        },
+        "city-inventory": {
+            "name": "Stadtinventar"
+        },
+        "planned-buildings": {
+            "name": "Geplant Gebäude",
+            "format": {
+                "title": "Gebäudemodell (geplant)",
+                "attributes": {
+                    "reference": "Aktenzeichen",
+                    "address": "Adresse",
+                    "floors": "Geschosse",
+                    "height": "Höhe"
+                }
+            }
+        }
+    },
+    "mesh": {
+        "name": "RVR Mesh 2025"
+    },
+    "twoD": {
+        "city-boundary": {
+            "name": "Stadtgrenze",
+            "credit": "Stadtgrenze: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/91ee94de-9803-4ea0-a0a6-91c91b1a661a'>Stadt Gelsenkirchen</a>"
+        },
+        "districts": {
+            "name": "Stadtteile (Beschriftung)"
+        }
+    }
+}

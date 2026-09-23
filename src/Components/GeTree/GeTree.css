@@ -1,0 +1,46 @@
+:host {
+    --indent: 2rem;
+    line-height: var(--line-height);
+}
+
+.wrapper {
+    color: var(--text-color-primary);
+    font-family: var(--font-family-primary, sans-serif);
+}
+
+summary {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    /*padding-left: var(--indent);*/
+}
+
+summary::marker {
+    content: none;
+}
+
+summary::before {
+    display: block;
+    content: '';
+    background: var(--icon-collapsed);
+    background-size: 100%;
+    width: var(--marker-size);
+    height: var(--marker-size);
+}
+
+details {
+    padding-left: var(--marker-size);
+}
+
+details[open] > summary::before {
+    background: var(--icon-expanded);
+    background-size: 100%;
+}
+
+.leaf-summary {
+    padding-left: var(--indent);
+}
+
+.leaf-summary::before {
+    content: none;
+}

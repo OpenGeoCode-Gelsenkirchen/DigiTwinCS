@@ -1,0 +1,268 @@
+{
+    "datetime": {
+        "iso8601": "2026-07-01T12:00:00Z"
+    },
+    "locales": "./locales/",
+    "boundaries": {
+        "x": {
+            "min": 355000,
+            "max": 375000
+        },
+        "y": {
+            "min": 5702000,
+            "max": 5723000
+        }
+    },
+    "proj4": {
+        "definition": "+proj=utm +ellps=GRS80 +datum=ETRS89 +unit=m +zone=32U +no_defs",
+        "epsg": 25832,
+        "labelShort": "ETRS89",
+        "labelLong": "(ETRS89 / UTM Zone 32N)"
+    },
+    "header": {
+        "icon": {
+            "src": "./images/ge/StadtGE_Weiss.svg",
+            "link": "https://www.gelsenkirchen.de"
+        },
+        "title": "common:header.title.text"
+    },
+    "footer": {
+        "elements": [
+            "<a href='https://www.gelsenkirchen.de/de/_funktionsnavigation/hilfe/datenschutzerklaerung.aspx' data-i18n='common:body:footer:data-privacy:text' target='_blank'>",
+            "<a href='https://www.gelsenkirchen.de/de/_funktionsnavigation/impressum.aspx' target='_blank' data-i18n='common:body:footer:imprint:text'>"
+        ]
+    },
+    "baseLayer": {
+        "Webkarte (farbig)": {
+            "show": true,
+            "iconUrl": "./images/ge/baselayer_webfarbig.png",
+            "tooltip": "Weboptimierte Karte von Gelsenkirchen (farbig)",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://gdi.gelsenkirchen.de/wss/service/WMSWebkarte_farbig/guest",
+                    "layers": "0",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:25832",
+                    "credit": "Webkarte farbig: <a style=\"color: deepskyblue; text-decoration: underline;\" href=\"https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/ea838119-de89-4bfd-9788-95372c462f6d\">Stadt Gelsenkirchen</a>"
+                }
+            ]
+        },
+
+        "TopPlusOpen (WMTS)": {
+            "iconUrl": "./images/ge/baselayer_topplus.png",
+            "tooltip": "Kombinierte Karte der ganzen Welt",
+            "creation": [
+                {
+                    "type": "WebMapTileServiceImageryProvider",
+                    "url": "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png",
+                    "layer": "",
+                    "style": "default",
+                    "tileMatrixSetID": "WEBMERCATOR",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "credit": "TopPlusOpen: <a style='color: deepskyblue; text-decoration: underline;' href='https://gdz.bkg.bund.de/index.php/default/wmts-topplusopen-wmts-topplus-open.html'>BKG</a>"
+                }
+            ]
+        },
+        "Luftbild (aktuell)": {
+            "iconUrl": "./images/ge/baselayer_dopbelaubt.png",
+            "tooltip": "Digitales Orthophoto, aufgenommen im Frühjahr",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://gdi.gelsenkirchen.de/wss/service/WMSLuftbilder_GE/guest",
+                    "layers": "aktuell_belaubt",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:25832",
+                    "credit": "Orthophoto (belaubt): <a style='color: deepskyblue; text-decoration: underline;' href='https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/29e16ee0-306e-48c6-982b-7e40b4dd06c8'>Stadt Gelsenkirchen</a>"
+                }
+            ]
+        },
+        "Luftbild (Overlay)": {
+            "iconUrl": "./images/ge/baselayer_dopunbelaubt_over.png",
+            "tooltip": "Digitales Orthophoto mit Overlay (http://www.geobasis.nrw.de)",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://geodaten.metropoleruhr.de/dop/dop_2024",
+                    "layers": "dop_2024",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/png"
+                    },
+                    "enablePickFeatures": true,
+                    "credit": "Orthophoto mit Overlay: <a href='https://www.bezreg-koeln.nrw.de/geobasis-nrw/produkte-und-dienste/luftbild-und-satellitenbildinformationen/aktuelle-luftbild-und-0' style='color: deepskyblue; text-decoration: underline;'>Geobasis NRW</a>"
+                },
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay",
+                    "layers": "nw_dop_overlay_hausnummern,nw_dop_overlay_unbefahrbare_wege,nw_dop_overlay_ortsstrassen,nw_dop_overlay_kreisstrassen,nw_dop_overlay_landstrassen,nw_dop_overlay_bundesstrassen,nw_dop_overlay_autobahn,nw_dop_overlay_ortsstrassen_beschriftung,nw_dop_overlay_kreisstrassen_beschriftung,nw_dop_overlay_landstrassen_beschriftung,nw_dop_overlay_bundesstrassen_beschriftung_2,nw_dop_overlay_bundesstrassen_beschriftung_1,nw_dop_overlay_autobahn_beschriftung_2,nw_dop_overlay_autobahn_beschriftung_1",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/png"
+                    },
+                    "enablePickFeatures": false,
+                    "tileWidth": 256,
+                    "tileHeight": 256,
+                    "crs": "EPSG: 4326"
+                }
+            ]
+        },
+        "Flurkarte (grau)": {
+            "iconUrl": "./images/ge/baselayer_flurkarte.png",
+            "tooltip": "Flurkarte der Stadt Gelsenkirchen",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://gdi.gelsenkirchen.de/wss/service/WMSLiegenschaftskataster/guest",
+                    "layers": "Flurkarte_grau",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:4326",
+                    "credit": "Flurkarte: <a style=\"color: deepskyblue; text-decoration: underline;\" href=\"https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/5a0f9ab8-8ba2-4e8a-ba93-afe602d44b89\">Stadt Gelsenkirchen</a>"
+                }
+            ]
+        },
+        "ABK (grau)": {
+            "iconUrl": "./images/ge/baselayer_abk.png",
+            "tooltip": "Amtliche Basiskarte der Stadt Gelsenkirchen",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://gdi.gelsenkirchen.de/wss/service/WMSLiegenschaftskataster/guest",
+                    "layers": "ABK_grau",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:4326",
+                    "credit": "Amtl. Basiskarte: <a style=\"color: deepskyblue; text-decoration: underline;\" href=\"https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/5a0f9ab8-8ba2-4e8a-ba93-afe602d44b89\">Stadt Gelsenkirchen</a>"
+                }
+            ]
+        },
+        "Stadtkarte (farbig)": {
+            "iconUrl": "./images/ge/baselayer_sk.png",
+            "tooltip": "Stadtkarte von Gelsenkirchen (farbig)",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://gdi.gelsenkirchen.de/wss/service/WMSStadtkarten/guest",
+                    "layers": "SK15_farb2024",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "crs": "EPSG:25832",
+                    "credit": "Stadtkarte 2024 (farbig): <a style=\"color: deepskyblue; text-decoration: underline;\" href=\"https://gdi.gelsenkirchen.de/mapapps/resources/apps/full-page-sdi/index.html?lang=de#/datasets/iso/be47c2e3-7136-4638-9982-4520c6ab2fab\">Stadt Gelsenkirchen</a>"
+                }
+            ]
+        },
+        "Stadtplan": {
+            "iconUrl": "./images/ge/baselayer_spw2light.png",
+            "tooltip": "Stadtplanwerk 2.0 - Light (https://www.rvr.ruhr/)",
+            "creation": [
+                {
+                    "type": "WebMapServiceImageryProvider",
+                    "url": "https://geodaten.metropoleruhr.de/spw2",
+                    "layers": "spw2_light",
+                    "parameters": {
+                        "transparent": true,
+                        "format": "image/jpeg"
+                    },
+                    "enablePickFeatures": false,
+                    "credit": "Stadtplanwerk 2.0: <a href=\"https://daten.geoportal.ruhr/srv/ger/catalog.search#/metadata/0183aeab-49dd-4846-8bff-e0325cb10c2a\" style=\"color: deepskyblue; text-decoration: underline;\">Regionalverband Ruhr<a>"
+                }
+            ]
+        }
+    },
+
+    "terrain": {
+        "Ellipsoid": {
+            "show": false,
+            "iconUrl": "./images/ge/baselayer_sphere.png",
+            "tooltip": "WGS84 Ellipsoid",
+            "creation": [
+                {
+                    "type": "EllipsoidTerrainProvider"
+                }
+            ]
+        }
+    },
+    "styling": {
+        "Neutral": {
+            "iconUrl": "./images/ge/Styling_Standard_Thumbnail2.png",
+            "active": false,
+            "changeBackground": false,
+            "value": "default",
+            "tooltip": "common:header.title.html"
+        },
+        "Höhe": {
+            "iconUrl": "./images/ge/Styling_Height_Thumbnail2.png",
+            "active": false,
+            "changeBackground": false,
+            "value": "height"
+        },
+        "Gebäudefunktion": {
+            "iconUrl": "./images/ge/Styling_Function_Thumbnail2.png",
+            "active": true,
+            "changeBackground": false,
+            "value": "functional"
+        }
+    },
+    "address": {
+        "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Adresskoordinaten_Sorted.json",
+        "resolve": false
+    },
+    "buildingAreaUrl": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Bemassungen/area/",
+    "buildingLengthUrl": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Bemassungen/line/",
+    "compass": "./images/ge/compass.svg",
+    "pdfIcon": "./images/ge/StadtGE_Blau.svg",
+    "overviewMap": {
+        "url": "https://gdi.gelsenkirchen.de/wss/service/WMSWebkarte_farbig/guest",
+        "layers": "0",
+        "attribution": "Stadt Gelsenkirchen",
+        "minZoom": 10,
+        "maxZoom": 16,
+        "bounds": [
+            [51.47, 6.98],
+            [51.64, 7.16]
+        ]
+    },
+    "deletionListSuffix": "Löschliste",
+    "defaultGltfUrl": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/Block.glb",
+    "wmsListUrl": {
+        "url": "https://geodata.gelsenkirchen.de/3dmodelle/standardmodell/WMS_ListShort.txt",
+        "resolve": false
+    },
+    "waterLevelRectangle": [
+        6.9177515296427678, 51.4328764351622212, 7.2159553171337993,
+        51.6712755365691976
+    ],
+    "highlight": {
+        "hover": {
+            "opaque": "#ffc0cb",
+            "transparent": "#f06464c8"
+        },
+        "selected": {
+            "opaque": "#8296f0",
+            "transparent": "#8296f082"
+        }
+    }
+}

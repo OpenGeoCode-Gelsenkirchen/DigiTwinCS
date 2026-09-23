@@ -1,0 +1,16 @@
+{
+    "building_one": "Gebäude",
+    "building_other": "Gebäude",
+    "bridge_one": "Brücke",
+    "bridge_other": "Brücken",
+    "noise-barrier_one": "Lärmschutzwand",
+    "noise-barrier_other": "Lärmschutzwände",
+    "vegetation": "Vegetation",
+    "overhead-lines": "Freileitungen",
+    "city-inventory": "Stadtinventar",
+    "sewer-network": "Kanalnetzwerk",
+    "planned-building": "Geplantes Gebäude",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "add": "Hinzuladen"
+}

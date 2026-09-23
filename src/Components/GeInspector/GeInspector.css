@@ -1,0 +1,486 @@
+:host {
+    min-width: 450px;
+    width: 500px;
+    height: 70%;
+}
+
+#control-widget button {
+    margin: 10 10 10 10;
+    font-size: 25px;
+}
+
+#control-widget button img {
+    width: 20;
+    height: 20;
+}
+
+.widget-l1 {
+    background: var(--color-primary);
+
+    position: absolute;
+    min-width: 500px;
+    max-width: 500px;
+    color: var(--text-color-primary);
+    width: max-content;
+    height: max-content;
+    box-shadow: black 2px 2px 8px 4px;
+}
+
+.widget-l1-small {
+    background: var(--color-primary);
+    position: absolute;
+    min-width: 200px;
+    /*max-width: 200px;*/
+    color: var(--text-color-primary);
+    width: max-content;
+    height: max-content;
+    box-shadow: black 2px 2px 8px 4px;
+}
+
+.widget-l2 {
+    font-size: 24px;
+    font-weight: bold;
+    background: var(--color-primary);
+    cursor: all-scroll;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.widget-l3 {
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--color-secondary);
+    padding: 10px;
+    max-height: 500px;
+    /*max-width: 440px;*/
+}
+
+.widget-l4 {
+    font-size: 13px;
+    padding: 8px !important;
+    color: var(--text-color-primary);
+    font-weight: normal;
+    text-align: center;
+    background: var(--color-tertiary);
+    margin-top: 10px;
+    display: grid;
+    gap: 8px 5px;
+    align-items: center;
+    border-radius: 4px;
+    grid-template-areas:
+        'position 		.			.					.					.					.						.'
+        'rw-label		hw-label	height-label		pos-snap-label		pos-snap-label		.						.'
+        'rw-inp			hw-inp		height-inp			pos-snap-cb			pos-snap-inp		reset-translation		tran'
+        'ground-clamp	ground-clamp	ground-clamp	ground-clamp		ground-clamp		ground-clamp			ground-clamp'
+        'rotation		.			.					.					.					.						.'
+        'x-rot-label	y-rot-label	z-rot-label			rot-snap-label		rot-snap-label		.						.'
+        'x-rot-inp		y-rot-inp	z-rot-inp			rot-snap-cb			rot-snap-inp		reset-rotation			rot'
+        'scale			scale			scale			scale				scale				scale					scale'
+        'x-scale-label	y-scale-label	z-scale-label	scale-snap-label	scale-snap-label	.						.'
+        'x-scale-inp	y-scale-inp		z-scale-inp		scale-snap-cb		scale-snap-inp		reset-scale				sca'
+        'uni-scale		uni-scale		uni-scale		uni-scale			uni-scale			uni-scale				uni-scale'
+        'apply-div		apply-div		apply-div		apply-div			apply-div			apply-div				apply-div';
+}
+
+#position-header {
+    font-weight: bold;
+    font-size: 14px;
+    overflow: hidden;
+    min-width: 0;
+    grid-area: position;
+    display: flex;
+}
+
+#rw-label {
+    grid-area: rw-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#rw-inp {
+    grid-area: rw-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#hw-label {
+    grid-area: hw-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#hw-inp {
+    grid-area: hw-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#height-label {
+    grid-area: height-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#height-inp {
+    grid-area: height-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#pos-snap-label {
+    grid-area: pos-snap-label;
+    overflow: hidden;
+    min-width: 0;
+    grid-column: span 2;
+    text-align: center;
+}
+
+#pos-snap-cb {
+    grid-area: pos-snap-cb;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#pos-snap-inp {
+    grid-area: pos-snap-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#rotation-header {
+    font-weight: bold;
+    font-size: 14px;
+    grid-area: rotation;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+}
+
+#x-rot-label {
+    grid-area: x-rot-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#x-rot-inp {
+    grid-area: x-rot-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#y-rot-label {
+    grid-area: y-rot-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#y-rot-inp {
+    grid-area: y-rot-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#z-rot-label {
+    grid-area: z-rot-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#z-rot-inp {
+    grid-area: z-rot-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#rot-snap-label {
+    grid-area: rot-snap-label;
+    overflow: hidden;
+    min-width: 0;
+    grid-column: span 2;
+    text-align: center;
+}
+
+#rot-snap-cb {
+    grid-area: rot-snap-cb;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#rot-snap-inp {
+    grid-area: rot-snap-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#scale-header {
+    font-weight: bold;
+    font-size: 14px;
+    grid-area: scale;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    border-top: 1px solid var(--text-color-primary);
+    padding-top: 0.5rem;
+}
+
+#x-scale-label {
+    grid-area: x-scale-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#x-scale-inp {
+    grid-area: x-scale-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#y-scale-label {
+    grid-area: y-scale-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#y-scale-inp {
+    grid-area: y-scale-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#z-scale-label {
+    grid-area: z-scale-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#z-scale-inp {
+    grid-area: z-scale-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#scale-snap-label {
+    grid-area: scale-snap-label;
+    overflow: hidden;
+    min-width: 0;
+    text-align: center;
+}
+
+#scale-snap-cb {
+    grid-area: scale-snap-cb;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#scale-snap-inp {
+    grid-area: scale-snap-inp;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#ground-clamp-label {
+    grid-area: ground-clamp-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#ground-clamp {
+    grid-area: ground-clamp;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    border-bottom: 1px solid var(--text-color-primary);
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+#uni-scale-label {
+    grid-area: uni-scale-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#uni-scale {
+    grid-area: uni-scale;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+#apply-div {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--text-color-primary);
+    padding-top: 0.5rem;
+    grid-area: apply-div;
+    overflow: hidden;
+}
+
+.inspector-button {
+    background-color: var(--color-secondary);
+    /*width: 30px;*/
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid var(--color-primary);
+    justify-self: center;
+    color: #edffff;
+    fill: #edffff;
+    cursor: pointer;
+}
+
+.inspector-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.inspector-button:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: #48b;
+    border-color: #aef;
+    box-shadow: 0 0 8px #fff;
+}
+
+.reset-button {
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/common/reset.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#reset-translation {
+    grid-area: reset-translation;
+    overflow: hidden;
+}
+
+#reset-translation-label {
+    grid-area: reset-translation-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#reset-rotation {
+    grid-area: reset-rotation;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#reset-rotation-label {
+    grid-area: reset-rotation-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#reset-scale {
+    grid-area: reset-scale;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#reset-scale-label {
+    grid-area: reset-scale-label;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#control-widget {
+    font-size: 14px;
+    font-weight: normal;
+    background: var(--color-tertiary);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    display: grid;
+    gap: 0.25rem 0.25rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+
+    grid-template-areas:
+        '.	ccw		north		cw		up'
+        '.	west		.			east	drop'
+        '.	.			south		.		down';
+}
+#gizmo-widget {
+    font-size: 14px;
+    font-weight: normal;
+    background: var(--color-tertiary);
+    margin-top: 10px;
+    display: grid;
+    gap: 1px 1px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+
+    grid-template-areas: '.	tran		rot		sca';
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.input-field {
+    border-radius: 3px;
+    border: 0;
+}
+
+#north-widget {
+    grid-area: north;
+}
+
+#south-widget {
+    grid-area: south;
+}
+
+#west-widget {
+    grid-area: west;
+}
+
+#east-widget {
+    grid-area: east;
+}
+
+#up-widget {
+    grid-area: up;
+}
+
+#down-widget {
+    grid-area: down;
+}
+
+#clock-widget {
+    grid-area: cw;
+}
+
+#counter-widget {
+    grid-area: ccw;
+}
+
+#drop-widget {
+    grid-area: drop;
+}
+
+#translation-widget {
+    grid-area: tran;
+}
+
+#rotation-widget {
+    grid-area: rot;
+}
+
+#scale-widget {
+    grid-area: sca;
+}
+.model-container-actions {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem !important;
+    background-color: var(--color-tertiary);
+}

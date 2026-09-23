@@ -1,0 +1,21 @@
+:host {
+    display: block;
+    min-height: min-content;
+    height: 100%;
+    background-color: var(--color-quaternary);
+}
+
+.grid {
+    display: grid;
+    gap: 0.7rem;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+}
+
+.grid > * {
+    margin: 1rem;
+}
+
+.grid:empty {
+    width: 0;
+}

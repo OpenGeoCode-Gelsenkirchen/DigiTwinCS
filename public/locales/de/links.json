@@ -1,0 +1,10 @@
+{
+    "pointcloud": {
+        "title": "Punktwolkenviewer",
+        "description": "Der 3D-Punktwolkenviewer von Gelsenkirchen"
+    },
+    "citymap": {
+        "title": "Stadtplan Gelsenkirchen",
+        "description": "Stadtplan der Stadt Gelsenkirchen"
+    }
+}

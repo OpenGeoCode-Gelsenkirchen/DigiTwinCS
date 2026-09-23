@@ -1,0 +1,10 @@
+{
+    "file": {
+        "title": "Fehlerhafte Eingabedatei",
+        "text": "Die Eingabedatei scheint fehlerhaft zu sein. Bitte überprüfen Sie die Richtigkeit der Datei."
+    },
+    "reprojection": {
+        "title": "Warnung: Interne Reprojektion",
+        "text": "Die Eingabe liegt nicht in WGS84 vor, wodurch diese reprojiziert werden muss. Diese Reprojektion kann ggfs. fehlerbehaftet sein und sollte geprüft werden."
+    }
+}
